@@ -1,0 +1,102 @@
+// Flexible Box Layout Module
+// W3C Working Draft, 23 July 2009
+// http://www.w3.org/TR/2009/WD-css3-flexbox-20090723/
+
+// Flexbox display
+// Applies to: box container
+.box-container () {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-box;
+  display: -o-box;
+  display: box;
+  .box-align();
+}
+
+// Display order
+// Applies to: children of box elements
+// <integer>
+.box-order (@order) {
+  -webkit-box-ordinal-group: @order;
+  -moz-box-ordinal-group: @order;
+  -ms-box-ordinal-group: @order;
+  -o-box-ordinal-group: @order;
+  box-ordinal-group: @order;
+}
+
+// Display direction
+// Applies to: box elements
+// [normal] | reverse | inherit
+.box-direction (@direction) {
+  -webkit-box-direction: @direction;
+  -moz-box-direction: @direction;
+  -ms-box-direction: @direction;
+  -o-box-direction: @direction;
+  box-direction: @direction;
+}
+
+// Packing along the box axis
+// Applies to: box elements
+// [start] | end | center | justify
+.box-pack (@align: start) {
+  -webkit-box-pack: @align;
+  -moz-box-pack: @align;
+  -ms-box-pack: @align;
+  -o-box-pack: @align;
+  box-pack: @align;
+}
+
+// Alignment
+// Applies to: box elements
+// start | end | center | baseline | [stretch]
+.box-align (@align: center) {
+  -webkit-box-align: @align;
+  -moz-box-align: @align;
+  -ms-box-align: @align;
+  -o-box-align: @align;
+  box-align: @align;
+}
+
+// Flexibility
+// Applies to:  in-flow children of box elements
+// <number> (initial: 0.0)
+.box-flex (@flexibility: 0.0) {
+  -webkit-box-flex: @flexibility;
+  -moz-box-flex: @flexibility;
+  -ms-box-flex: @flexibility;
+  -o-box-flex: @flexibility;
+  box-flex: @flexibility;
+}
+
+// Flexibility
+// Applies to:  in-flow children of box elements
+// <integer> (initial: 1)
+.box-flex-group (@flexibility: 1) {
+  -webkit-box-flex-group: @flexibility;
+  -moz-box-flex-group: @flexibility;
+  -ms-box-flex-group: @flexibility;
+  -o-box-flex-group: @flexibility;
+  box-flex-group: @flexibility;
+}
+
+// Orientation
+// Applies to: box elements
+// horizontal | vertical | [inline-axis] | block-axis | inherit
+.box-orient (@orientation: inline-axis) {
+  -webkit-box-orient: @orientation;
+  -moz-box-orient: @orientation;
+  -ms-box-orient: @orientation;
+  -o-box-orient: @orientation;
+  box-orient: @orientation;
+}
+
+// Multiple lines
+// Applies to: box elements
+// [single] | multiple
+.box-lines (@lines: single) {
+  -webkit-box-lines: @lines;
+  -moz-box-lines: @lines;
+  -ms-box-lines: @lines;
+  -o-box-lines: @lines;
+  box-lines: @lines;
+}

@@ -1,0 +1,196 @@
+@font-face { 
+	font-family: Museo;
+	font-weight: @weight-regular;
+	src: url('../res/fonts/Museo300-Regular.otf');
+}
+@font-face { 
+	font-family: Museo;
+	font-weight: @weight-bold;
+	src: url('../res/fonts/Museo500-Regular.otf');
+}
+
+body h1 {
+	font-family: Museo;
+	font-size: 100px;
+	text-shadow: 0px 1px 0px rgba(1, 5, 8, 0.4);
+	display: inline-block;
+	padding-top: 50px;
+
+}
+
+
+.content{
+	display: inline;
+
+}
+.purple-border{
+	border-color: rgba(117, 0, 201, 1);
+	border-width: 1px;
+	border-style: solid;
+	border-radius: 30px;
+}
+.awesome-info{
+	display: inline;
+	overflow: auto;
+}
+.iphone{
+	float: right;
+	padding-top: 100px;
+}
+
+.highlight{
+	color: rgba(117, 0, 201, 1);
+}
+.logo-image{
+	padding-bottom: 90px;
+	
+
+}
+
+.awesome-body{
+	min-height: 100%;
+	font-family: Museo;
+	background: url('../img/background.fw.png') no-repeat center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+
+
+}
+
+
+
+.purple-line{
+	min-width: 100%;
+	height: 5px;
+	background-color: rgba(117, 0, 201, 1);
+}
+.bottom{
+	position: absolute;
+	bottom: 0;
+	display: inline-block;
+	
+}
+
+.top{
+	position: absolute;
+	top:0;
+	display: inline-block;
+	
+}
+
+form#subscribe .submit-button{
+	background-color: rgba(117, 0, 201, 0.8);
+	color: white;
+}
+
+form#subscribe .submit-button:hover{
+	background-color: white;
+	color: rgba(117, 0, 201, 0.8);
+	border-color: rgba(117, 0, 201, 0.8);
+}
+
+
+
+
+
+
+
+
+
+
+/* Animations */
+
+@keyframes gamaChange
+{
+	0%		{background-color: rgba(117, 0, 201, 1.0);}
+	10%		{background-color: rgba(117, 0, 201, 0.9);}
+	20%		{background-color: rgba(117, 0, 201, 0.8);}
+	30%		{background-color: rgba(117, 0, 201, 0.7);}
+	50%		{background-color: rgba(117, 0, 201, 0.6);}
+	60%		{background-color: rgba(117, 0, 201, 0.5);}
+	70%		{background-color: rgba(117, 0, 201, 0.4);}
+	80%		{background-color: rgba(117, 0, 201, 0.3);}
+	90%		{background-color: rgba(117, 0, 201, 0.2);}
+	100%	{background-color: rgba(117, 0, 201, 0.1);}
+}
+
+@-webkit-keyframes gamaChange 
+{
+	0%		{background-color: rgba(117, 0, 201, 1.0);}
+	10%		{background-color: rgba(117, 0, 201, 0.9);}
+	20%		{background-color: rgba(117, 0, 201, 0.8);}
+	30%		{background-color: rgba(117, 0, 201, 0.7);}
+	50%		{background-color: rgba(117, 0, 201, 0.6);}
+	60%		{background-color: rgba(117, 0, 201, 0.5);}
+	70%		{background-color: rgba(117, 0, 201, 0.4);}
+	80%		{background-color: rgba(117, 0, 201, 0.3);}
+	90%		{background-color: rgba(117, 0, 201, 0.2);}
+	100%	{background-color: rgba(117, 0, 201, 0.1);}
+}
+
+.purple-animate{
+	animation: gamaChange 10s linear 3s infinite alternate;
+	-webkit-animation: gamaChange 10s linear 3s infinite alternate;
+}
+
+/** Add icons as fonts **/
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../res/fonts/fontello.eot?98528402');
+  src: url('../res/fonts/fontello.eot?98528402#iefix') format('embedded-opentype'),
+       url('../res/fonts/fontello.woff?98528402') format('woff'),
+       url('../res/fonts/fontello.ttf?98528402') format('truetype'),
+       url('../res/fonts/fontello.svg?98528402#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?98528402#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-profile:before { content: '\e802'; } /* '' */
+.icon-trip:before { content: '\e800'; } /* '' */
+.icon-group:before { content: '\e801'; } /* '' */
+.icon-clear:before { content: '\e804'; } /* '' */
+.icon-road:before { content: '\e803'; } /* '' */

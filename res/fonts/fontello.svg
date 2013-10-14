@@ -1,0 +1,16 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg">
+<metadata>Copyright (C) 2013 by original authors @ fontello.com</metadata>
+<defs>
+<font id="fontello" horiz-adv-x="1000" >
+<font-face font-family="fontello" font-weight="400" font-stretch="normal" units-per-em="1000" ascent="850" descent="-150" />
+<missing-glyph horiz-adv-x="1000" />
+<glyph glyph-name="profile" unicode="&#xe802;" d="m990-66l-834 0q-65 0-110 46t-46 110l0 520q0 65 46 111t110 46l834 0q65 0 111-46t45-111l0-520q0-65-45-110t-111-46z m-834 729q-21 0-37-16t-15-37l0-520q0-21 15-37t37-15l834 0q21 0 36 15t15 37l0 520q0 22-15 37t-36 16l-834 0z m313-469l-209 0q-21 0-36 16t-15 37t15 36t36 15l209 0q21 0 37-15t15-36t-15-37t-37-16z m0 209l-209 0q-21 0-36 15t-15 36t15 37t36 16l209 0q21 0 37-16t15-37t-15-36t-37-15z m209 25q0 105 103 105t104-105q0-104-104-104t-103 104z m103-148q57 0 93-22t37-53q0-15-37-26t-93-11q-58 0-94 11t-36 26q0 30 36 53t94 22z" horiz-adv-x="1146" />
+<glyph glyph-name="trip" unicode="&#xe800;" d="m576 797l112 0l0-108q0-115-82-197l-316-314q-44-45-48-106l111 0l-167-169l-168 169l113 0q6 111 80 185l316 314q49 50 49 118l0 108z m110-725l113 0l-167-169l-168 169l111 0q-4 61-48 106l-63 62l80 79l62-62q74-74 80-185z" horiz-adv-x="817" />
+<glyph glyph-name="group" unicode="&#xe801;" d="m0 106l0 134q0 26 18 32l171 80q-66 39-68 131q0 56 35 103q37 41 90 43q31 0 63-19q-49-125 23-237q-12-11-25-19l-114-55q-48-23-52-84l0-143l-114 0q-25 0-27 34z m193-59l0 168q0 27 22 37l152 70l57 28q-37 23-60 66t-22 94q0 76 46 130t110 54t109-54t45-130q0-106-78-158l61-30l146-70q24-10 24-37l0-168q-2-37-37-41l-541 0q-14 2-24 14t-10 27z m473 330q68 106 22 231q31 19 66 21q49 0 90-43q35-41 35-103q0-82-65-131l168-80q18-10 18-32l0-134q0-32-27-34l-118 0l0 143q0 57-50 84l-110 53q-15 8-29 25z" horiz-adv-x="1000" />
+<glyph glyph-name="clear" unicode="&#xe804;" d="m0 350q0 207 147 354t353 146t354-146t146-354t-146-354t-354-146t-353 146t-147 354z m219-156l125-125l156 156l156-156l125 125l-156 156l156 156l-125 125l-156-156l-156 156l-125-125l156-156z" horiz-adv-x="1000" />
+<glyph glyph-name="road" unicode="&#xe803;" d="m0-150l201 1000l250 0l-8-230l114 0l-8 230l250 0l201-1000l-418 0l-10 287l-144 0l-10-287l-418 0z m430 373l140 0l-11 340l-118 0z" horiz-adv-x="1000" />
+</font>
+</defs>
+</svg>
