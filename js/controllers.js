@@ -52,6 +52,16 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
       	$scope.tGroup = data.name;
   	};
 
+    var handleSubscribeSuccess = function(data, status){
+      console.log("MailChimp.subscribe() Post success ==> " + "data.groups: " + data + " status: " + status);
+        $scope.noGroup = data;
+    };
+
+    var handleSubscribeError = function(data, status){
+      console.log("MailChimp.subscribe() Post error ==> " + "data: " + data.name + " status: " + status);
+        $scope.noGroup = data.name;
+    };
+
   	MailChimp.ping().success(handlePingSuccess).error(handlePingError);
   	MailChimp.getGroups().success(handleGroupsSuccess).error(handleGroupsError);
   	MailChimp.addGroup('noGroup').success(handleAddGroupsSuccess).error(handleAddGroupsError);

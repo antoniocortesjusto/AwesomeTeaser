@@ -1,37 +1,6 @@
 var services = angular.module('services', []);
 
 
-services.factory('Friends', function(){
-	var Friends = [
-  					{	img: "foto", name: "Toño"},
-  					{	img: "foto", name: "Pedro"},
-  					{	img: "foto", name: "Juan"},
-  					{	img: "foto", name: "Miguel"},
-  					{	img: "foto", name: "Alvaro"},
-  					{	img: "foto", name: "Pablo"},
-  					{	img: "foto", name: "Ernesto"},
-  					{	img: "foto", name: "Rodrigo"},
-  					{	img: "foto", name: "Manuel"},
-  					{	img: "foto", name: "Juan Manuel"},
-  					{	img: "foto", name: "Jose"},
-  					{	img: "foto", name: "Antonio"},
-  					{	img: "foto", name: "Jose Miguel"},
-  					{	img: "foto", name: "Jose Antonio"},
-  					{	img: "foto", name: "Andres"},
-  					{	img: "foto", name: "Luis"}];
-  
-  	return Friends;
-});
-
-services.factory('User', function(){
-  var User = {
-          img: "glyphicon glyphicon-user user-photo",
-          name: "Juan Soler",
-          email: "juan.soler@awesome.do",
-          telNumber: "636837248"};
-  return User;
-});
-
 
 services.factory('MailChimp', function($http){
   
@@ -39,6 +8,7 @@ services.factory('MailChimp', function($http){
   var key = 'b129b31bdc33e77c3c2a9d1d5979c162-us7';
   var listId = '95c1bab1e9';
   var listName = 'AwesomeTeaser';
+  var groupingId ='0'
   
 
   return{
@@ -68,6 +38,19 @@ services.factory('MailChimp', function($http){
         apikey: key,
         id: listId,
         group_name: groupName 
+      };
+
+      return $http.post(url + apiMethod, data);   
+    },
+
+    subscribe : function(email, groupName){
+      var apiMethod = '/lists/subscribe';
+      var data = {
+        apikey: key,
+        id: listId,
+        email: {email: email},
+        merge_vars: {groupings: [{id: groupingId, groups:[groupName]}]},
+        double_optin: true 
       };
 
       return $http.post(url + apiMethod, data);   
