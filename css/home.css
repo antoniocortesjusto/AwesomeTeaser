@@ -36,6 +36,34 @@ body h1 {
 .iphone{
 	float: right;
 	padding-top: 100px;
+	width: 320px;
+	
+}
+
+
+@media screen and (min-width: 768px){
+	div#carouselPreview ol.carousel-indicators {
+		bottom: 25px;
+	}
+}
+
+div#carouselPreview ol.carousel-indicators {
+	bottom: -50px;
+}
+
+
+.carousel-indicators li{
+    
+    border-color: rgba(117, 0, 201, 1);
+}
+.carousel-indicators .active{
+    background-color: rgba(117, 0, 201, .8);
+    
+}
+
+.screenshot-img{
+	width: 320px;
+	height: auto;
 }
 
 .highlight{
@@ -47,15 +75,41 @@ body h1 {
 
 }
 
-.awesome-body{
-	min-height: 100%;
+.awesome-container{
+	position:absolute;
+	width: 100%;
+	top:0;
+	left:0;
+	font-family: Museo;
+	background-color:rgba(255, 255, 255, 1) center center fixed;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
+  	background-size: cover;
+  	min-height: 740px;
+  	z-index: 10;
+  	padding-bottom: 5px; /*Footer height*/
+  	height: 100%;
+
+
+}
+
+.map-container{
+	
+	position:absolute;
+	width: 100%;
+
+	top:0;
+	left:0;
 	font-family: Museo;
 	background: url('../img/background.fw.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-
+  	min-height: 740px;
+  	z-index: -10;
+  	height: 100%;
 
 }
 
@@ -93,12 +147,19 @@ form#subscribe .submit-button:hover{
 
 
 
+.form-control:focus{
+	border-color: rgb(117, 0, 201);
+	outline: 0;
+  	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(117, 0, 201, 0.6);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(117, 0, 201, 0.6);
+}
 
 
-
-
-
-
+form#subscribe div.alert{
+	margin-top: 10px;
+	width: 467px;
+	padding:3px;
+}
 
 /* Animations */
 
@@ -131,43 +192,43 @@ form#subscribe .submit-button:hover{
 }
 
 .purple-animate{
-	animation: gamaChangePurple 10s linear 3s infinite alternate;
-	-webkit-animation: gamaChangePurple 10s linear 3s infinite alternate;
+	animation: gamaChangePurple 10s linear 0s infinite alternate;
+	-webkit-animation: gamaChangePurple 10s linear 0s infinite alternate;
 }
 
 
 
 @keyframes gamaChangeWhite
 {
-	0%		{background-color:white;opacity:1.0;}
-	10%		{background-color:white;opacity:0.9;}
-	20%		{background-color:white;opacity:0.8;}
-	30%		{background-color:white;opacity:0.7;}
-	50%		{background-color:white;opacity:0.6;}
-	60%		{background-color:white;opacity:0.5;}
-	70%		{background-color:white;opacity:0.4;}
-	80%		{background-color:white;opacity:0.3;}
-	90%		{background-color:white;opacity:0.2;}
-	100%	{background-color:white;opacity:0.1;}
+	0%		{background-color:rgba(255, 255, 255, 1.0);}
+	10%		{background-color:rgba(255, 255, 255, 0.9)}
+	20%		{background-color:rgba(255, 255, 255, 0.8)}
+	30%		{background-color:rgba(255, 255, 255, 0.7)}
+	50%		{background-color:rgba(255, 255, 255, 0.6)}
+	60%		{background-color:rgba(255, 255, 255, 0.5)}
+	70%		{background-color:rgba(255, 255, 255, 0.4)}
+	80%		{background-color:rgba(255, 255, 255, 0.3)}
+	90%		{background-color:rgba(255, 255, 255, 0.2)}
+	100%	{background-color:rgba(255, 255, 255, 0.1)}
 }
 
 @-webkit-keyframes gamaChangeWhite
 {
-	0%		{background-color:white;opacity:1.0;}
-	10%		{background-color:white;opacity:0.9;}
-	20%		{background-color:white;opacity:0.8;}
-	30%		{background-color:white;opacity:0.7;}
-	50%		{background-color:white;opacity:0.6;}
-	60%		{background-color:white;opacity:0.5;}
-	70%		{background-color:white;opacity:0.4;}
-	80%		{background-color:white;opacity:0.3;}
-	90%		{background-color:white;opacity:0.2;}
-	100%	{background-color:white;opacity:0.1;}
+	0%		{background-color:rgba(255, 255, 255, 1.0);}
+	10%		{background-color:rgba(255, 255, 255, 0.9)}
+	20%		{background-color:rgba(255, 255, 255, 0.8)}
+	30%		{background-color:rgba(255, 255, 255, 0.7)}
+	50%		{background-color:rgba(255, 255, 255, 0.6)}
+	60%		{background-color:rgba(255, 255, 255, 0.5)}
+	70%		{background-color:rgba(255, 255, 255, 0.4)}
+	80%		{background-color:rgba(255, 255, 255, 0.3)}
+	90%		{background-color:rgba(255, 255, 255, 0.2)}
+	100%	{background-color:rgba(255, 255, 255, 0.1)}
 }
 
 .white-animate{
-	animation: gamaChangeWhite 10s linear 3s infinite alternate;
-	-webkit-animation: gamaChangeWhite 10s linear 3s infinite alternate;
+	animation: gamaChangeWhite 10s linear 0s infinite alternate;
+	-webkit-animation: gamaChangeWhite 10s linear 0s infinite alternate;
 }
 /** Add icons as fonts **/
 

@@ -2,7 +2,7 @@ var Awesome =angular.module("AwesomeTeaser", ['filters', 'controllers', 'directi
 
 
 
-Awesome.config(function($routeProvider) {
+Awesome.config(function($routeProvider, $sceDelegateProvider) {
   
   $routeProvider.when('/register/:groupId', {
     templateUrl: 'html/group.html',
@@ -24,5 +24,10 @@ Awesome.config(function($routeProvider) {
   $routeProvider.otherwise({
     redirectTo: "/"
   });
+
+  $sceDelegateProvider.resourceUrlWhitelist(['self','https://us7.api.mailchimp.com/2.0','http://localhost']);
+
+
+
 
 });
