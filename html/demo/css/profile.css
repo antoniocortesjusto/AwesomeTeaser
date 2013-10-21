@@ -1,0 +1,28 @@
+.data {
+	position:absolute;
+	
+	padding-top: 60px;
+	width: 90%;
+}
+.number {
+	position: relative;
+	vertical-align: middle;
+	text-align: center;
+	font-size: 40px;
+}
+.save-btn {
+	text-align: right;
+}
+.setBtn {
+	text-align: center;
+}
+#set-btn {
+	width: 50%;
+    text-align:center;
+    min-width: 120px;
+}
+.user-photo{
+	color:#555555;
+	vertical-align:-10px;
+	font-size: 64px;
+}

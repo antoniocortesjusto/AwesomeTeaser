@@ -20,12 +20,26 @@ Awesome.config(function($routeProvider, $sceDelegateProvider) {
     controller: 'DemoCtrl'
   });
 
+   $routeProvider.when('/team', {
+    templateUrl: 'html/team.html',
+    controller: 'TeamCtrl'
+  });
+
+   $routeProvider.when('/pitch', {
+    templateUrl: 'html/pitch.html',
+    controller: 'PithCtrl'
+  });
+
+   $routeProvider.when('/elevator', {
+    redirectTo: '/pitch'
+  });
+
   
   $routeProvider.otherwise({
     redirectTo: "/"
   });
 
-  $sceDelegateProvider.resourceUrlWhitelist(['self','https://us7.api.mailchimp.com/2.0','http://localhost']);
+  $sceDelegateProvider.resourceUrlWhitelist(['self','https://us7.api.mailchimp.com/2.0']);
 
 
 

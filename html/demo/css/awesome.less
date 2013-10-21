@@ -1,0 +1,181 @@
+/*
+Copyright (c) 2013 by Awesome.do - All Rights Reserved.
+*/
+
+@import "mixins.less";
+@import "vendor.less";
+@import "flexbox.less";
+
+/*** COLORS **/
+@primary: #7000CA;
+@bg-main: #FFF;
+@bg-light: #EEE;
+@bg-dark: #999;
+@text-dark: #555;
+@text-medium: #888;
+@text-light: #BBB;
+@border: #CCC;
+@transparent: rgba(0,0,0,0);
+
+/*** SIZES ***/
+@row-large: 50px;
+@row-medium: 30px;
+@row-small: 20px;
+@radius: 3px;
+
+/*** FONTS ***/
+@font-large: 18px;
+@font-medium: 14px;
+@font-small: 12px;
+@weight-bold: 500;
+@weight-regular: 300;
+@weight-light: 100;
+
+@font-face {
+	font-family: Museo;
+	font-weight: @weight-regular;
+	src: url('../res/fonts/Museo300-Regular.otf');
+}
+
+@font-face {
+	font-family: Museo;
+	font-weight: @weight-bold;
+	src: url('../res/fonts/Museo500-Regular.otf');
+}
+
+* {
+	font-family: Museo;
+	font-weight: @weight-regular;
+	font-size: @font-large;
+	color: @text-medium;
+}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	padding: 0;
+	margin: 0;
+	background: @bg-main;
+	-webkit-user-select: none;
+	-webkit-text-size-adjust: none;
+	-webkit-tap-highlight-color: @transparent;
+}
+
+.scrollable-enabled .scrollable {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.text {
+	&.dark {
+		color: @text-dark;
+	}
+	&.medium {
+		color: @text-medium;
+	}
+	&.light {
+		color: @text-light;
+	}
+}
+
+.row {
+	.box-container();
+	width: 100%;
+	height: @row-large;
+	background: @bg-main;
+	border-bottom: 1px solid @border;
+	
+	&.large {
+		height: @row-large;
+		.pic {
+			width: @row-large;
+			height: @row-large;
+			background: @bg-light;
+		}
+	}
+
+	&.medium {
+		height: @row-medium;
+	}
+
+	&.small {
+		height: @row-small;
+	}
+
+	.text {
+		.box-flex(1);
+		margin: auto 10px;
+	}
+
+	input {
+		display: block;
+		outline: 0;
+		margin: 0;
+		padding: 0;
+		border: none;
+		vertical-align: middle;
+		color: @text-medium;
+		.placeholder-color(@text-light);
+	}
+
+	.button {
+		display: inline-block;
+		//position: relative;
+		height: 24px;
+		line-height: 24px;
+		margin: auto 10px;
+		padding: 0 5px;
+		text-align: center;
+		text-decoration: none;
+		.background-gradient(@bg-main, 0%, @bg-light, 100%);
+		border: 1px solid @border;
+		border-radius: @radius;
+
+		&:before {
+		    .tap-area(8px);
+		}
+
+		&:active {
+			color: @text-light;
+			.background-gradient(@border, 0%, @bg-main, 100%);
+		}
+	}
+
+	.clear {
+		display: block;
+		width: 20px;
+		height: 20px;
+		margin: 0 10px 0 0;
+		background: url('../img/clear-input.png') no-repeat 0px 0px;
+		background-size: 100%;
+	}
+}
+
+.shadow {
+	.box-shadow(0px, 1px, 5px, rgba(0,0,0,0.35));
+	border-bottom: none;
+}
+
+/*** NAVBAR ***/
+
+#navbar {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1000;
+}
+
+#navbar-icon {
+	width: (@row-large - 10px);
+	height: (@row-large - 10px);
+	margin: 0px -10px 0px 5px;
+	background: url('../img/awesome_icon.png') no-repeat 0px 0px;
+	background-size: 100%;
+}
+
+#map-canvas {
+	width: 100%;
+	height: 100%;
+}

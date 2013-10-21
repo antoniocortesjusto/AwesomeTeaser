@@ -71,3 +71,23 @@ controllers.controller('RegisterCtrl', function($scope, $route, $routeParams){
 });
 
 
+controllers.controller('TeamCtrl', function($scope, $route){
+  
+
+
+});
+
+controllers.controller('PitchCtrl', function($scope, $route){
+  
+
+
+});
+
+controllers.controller('DemoCtrl', function($scope, $route){
+  
+
+
+});
+
+
+

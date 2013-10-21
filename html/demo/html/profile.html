@@ -1,0 +1,51 @@
+<div ng-controller="ProfileCtrl" id ="header "> 
+	<div class=" container home-header">
+		<button ng-click="$navigate.go('/')" id="btn-awesome-profile" type="button" class= "btn-awesome-header" >
+				<img class="home-awesome-icon" src="img/awesome_icon.png">
+		</button>
+		<div id="profile-title" class= "container section-title-container">
+			<span class="section-title"> Profile</span>
+  		</div>
+	</div>
+	<div class="data">
+		<form class="form-horizontal" role="form">
+			<div class="form-group ">
+				<label for="phoneNumber" class="col-lg-2 control-label">
+					<i class="user-photo {{user.img}}"></i>
+				</label>
+				<div class="col-lg-10">
+					<div class="number">
+					<span id="phoneNumber" class="number">{{user.telNumber}}</span>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+	    		<label for="inputName" class="col-lg-2 control-label">Name</label>
+	    		<div class="col-lg-10">
+	    			<input type="name" class="form-control" id="inputName" value={{user.name}}>
+	    		</div>
+	  		</div>
+	  		<div class="form-group">
+	    		<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
+	    		<div class="col-lg-10">
+	    			<input type="email" class="form-control" id="inputEmail1" value={{user.email}}>
+	    		</div>
+	  		</div>
+	  		<div class="form-group save-btn">
+	  			<label for="save-btn" class="col-lg-2 control-label"></label>
+	  			<div class="col-lg-10">
+					<button type="button" class="btn btn-default" id="save-btn">Save</button>
+				</div>
+			</div>
+			<div class="form-group setBtn">
+				<label for="set-btn" class="col-lg-2 control-label"></label>
+				<div class="col-lg-10">
+					<button type="button"  id="set-btn" class="btn btn-default btn-lg">Settings 
+						<i class="icon-set"></i>
+					</button>
+				</div>
+			</div>
+		</form>
+	</div>
+	
+</div>

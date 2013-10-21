@@ -18,6 +18,19 @@ body h1 {
 
 }
 
+.ie{
+	display: inline-block;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+}
+.warning-ie{
+	width: 62.5%;
+}
+.logo-ie{
+	padding-left: 100 px;
+	float: left;
+}
 
 .content{
 	display: inline;
@@ -27,7 +40,6 @@ body h1 {
 	border-color: rgba(117, 0, 201, 1);
 	border-width: 1px;
 	border-style: solid;
-	border-radius: 30px;
 }
 .awesome-info{
 	display: inline;
@@ -159,6 +171,47 @@ form#subscribe div.alert{
 	margin-top: 10px;
 	width: 467px;
 	padding:3px;
+}
+
+
+
+/*Demo*/
+
+.preview-iframe{
+	overflow: hidden;
+	float: right;
+}
+
+.demo{
+	padding-top: 100px;
+}
+
+
+
+/*Pitch*/
+
+.awesome-pitch{
+	position: absolute;
+	left: 25%;
+}
+
+
+/*Team*/
+
+.team{
+	display: table-row;
+	width: 100%;
+}
+
+.team-member{
+	padding-right: 50px;
+	width: 244px;
+	display: table-cell;
+}
+
+div.team div.team-member .team-photo, .team-photo{
+	border-color: rgba(117, 0, 201, 1.0);
+	border-radius: 0px;
 }
 
 /* Animations */

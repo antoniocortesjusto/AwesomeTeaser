@@ -1,0 +1,348 @@
+@font-face { 
+	font-family: Museo;
+	font-weight: @weight-regular;
+	src: url('../res/fonts/Museo300-Regular.otf');
+}
+@font-face { 
+	font-family: Museo;
+	font-weight: @weight-bold;
+	src: url('../res/fonts/Museo500-Regular.otf');
+}
+.home-awesome-icon{
+	
+	width: 40px;
+	height: 40px;
+}
+
+.btn-awesome{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:white;
+	opacity:0.9;
+	display:inline-block;
+	border:1px solid;
+	border-color: white;
+	border-radius:2px;
+	-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	box-shadow:0px 1px 10px rgba(0, 0, 0, 0.4);
+	padding-right: 0px;
+	
+	height: 46px;
+	width: 64px;
+	margin-left: 0px;
+	padding-left: 0px;
+
+
+}
+
+.btn-awesome-header{
+	position:absolute;
+	top:0;
+	left:0;
+	background-color:white;
+	opacity:0.9;
+	display:inline-block;
+	border:1px solid;
+	border-color: white;
+	border-radius:2px;
+	
+	padding-right: 0px;
+	
+	height: 46px;
+	width: 64px;
+	margin-left: 0px;
+	padding-left: 0px;
+
+
+}
+
+.div-img-awesome{
+	position:absolute;
+	top:0;
+	left:0;
+	display:inline-block;
+	padding-right: 0px;
+	height: 46px;
+	margin-left: 0px;
+	padding-left: 0px;
+	padding-top: 2px;
+
+}
+
+
+
+
+div#menu.home-header, .home-header, .header
+{
+	position:absolute;
+	top:0;
+	background-color:white;
+	opacity:0.9;
+	display:inline-block;
+	border:1px solid;
+	border-color: white;
+	border-radius:2px;
+	-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	box-shadow:0px 1px 10px rgba(0, 0, 0, 0.4);
+	padding-right: 0px;
+	min-width: 100%;
+	margin-left: 0px;
+	padding-left: 6px;
+	z-index: 2;
+	height: 47px;
+
+	
+}
+
+div#menu.home-header-menu, div#search.home-header-menu
+{
+	position:absolute;
+	top:47px;
+	background-color:white;
+	opacity:0.9;
+	display:inline-block;
+	border:none;
+	border-color: white;
+	float: left;
+	-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	box-shadow:0px 1px 10px rgba(0, 0, 0, 0.4);
+	padding-right: 0px;
+	min-width: 100%;
+	margin-left: 0px;
+	padding-left: 0px;
+	z-index: 1;
+	
+	
+}
+
+.friends-list{
+	position: absolute;
+	min-width: 100%;
+	z-index: 0;
+
+	top:93px;
+}
+
+.home-footer
+{
+	font-family:Museo;
+	color:#555555;
+	font-size:40px;
+	position:absolute;
+	position: fixed;
+	bottom:0;
+	background-color:white;
+	opacity:0.9;
+	display:inline-block;
+	width:100%;
+	
+	border:1px solid;
+	border-color: white;
+	border-radius:0px;
+	-webkit-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.4);
+	box-shadow:0px 1px 10px rgba(0, 0, 0, 0.4);
+}
+
+#map-canvas {
+  height: 100%;
+  position: relative; 
+  top: 0; 
+  bottom: -200px; 
+  left: 0; 
+  right: 0; 
+  z-index: 0;
+  padding-top: 50px;
+
+}
+
+
+.form1{
+	padding-left: 25px;
+}
+/*.container{
+	padding-left: 0px;
+	margin-left: 0px;
+}*/
+
+.user-photo-div{
+	display: inline-block;
+	float:left;
+}
+.user-photo{
+	color:#555555;
+	vertical-align:-10px;
+	font-size: 64px;
+	
+}
+
+.img-search{
+	float:left;
+	vertical-align: middle;
+}
+
+
+div#search input.searchInput{
+	border: none;
+	color:#555555;
+	font-size:20px;
+}
+
+.clear-btn{
+	position: absolute;
+	float: right;
+	top: 10px;
+	margin-right: auto;
+	
+	right: 	35px;
+	width: 45px;
+	text-align: center;
+	background-color: white;
+	border-width: 0px;
+	opacity: 0.7; 
+}
+
+
+
+
+.menu-option{
+	height: 46px;
+	
+}
+
+.menu-option-border{
+	
+	border-top: 1px solid rgba(0, 0, 0, 0.2);
+	border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+}
+
+li.menu-option i.menu-icon{
+	font-size: 30px;
+	color:#7500C9;
+	padding-left: 10px;
+	
+}
+
+.menu-option-title{
+	text-align: center;
+	font-size: 25px;
+	color:#555555;
+	padding-left: 25px;
+}
+
+div#menu ul{
+	list-style-type: none;
+	padding-left: 0px;
+	margin-bottom: 0px;
+}
+
+footer div.awesome-bar-size{
+	height: 7px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+}
+
+footer div.progress-name-div{
+	width: 100%;
+	text-align: bottom;
+}
+
+footer div.awesome-bar-color{
+	background-color: #7500C9;
+}
+
+footer div.awesome-bar-back-color{
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.name{
+	font-size: 30px;
+	color:#555555;
+	padding-left: 30px;
+}
+.name-div{
+	padding-top: 10px;
+}
+
+.section-title{
+	font-size: 30px;
+	color:#555555;
+	
+
+}
+
+.section-title-container{
+	text-align: center;
+	vertical-align: middle;
+	
+}
+
+
+/** Add icons as fonts **/
+
+@font-face {
+  font-family: 'fontello';
+  src: url('../res/fonts/fontello.eot?94766900');
+  src: url('../res/fonts/fontello.eot?94766900#iefix') format('embedded-opentype'),
+       url('../res/fonts/fontello.woff?94766900') format('woff'),
+       url('../res/fonts/fontello.ttf?94766900') format('truetype'),
+       url('../res/fonts/fontello.svg?94766900#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?94766900#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-profile:before { content: '\e802'; } /* '' */
+.icon-trip:before { content: '\e800'; } /* '' */
+.icon-user:before { content: '\e805'; } /* '' */
+.icon-male:before { content: '\e807'; } /* '' */
+.icon-female:before { content: '\e808'; } /* '' */
+.icon-group:before { content: '\e801'; } /* '' */
+.icon-clear:before { content: '\e804'; } /* '' */
+.icon-set:before { content: '\e806'; } /* '' */
+.icon-road:before { content: '\e803'; } /* '' */

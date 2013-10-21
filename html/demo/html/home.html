@@ -1,0 +1,54 @@
+
+	<div id='map-canvas' ></div>
+	<div ng-controller="HomeCtrl">
+		<typeahead>
+			<ul  ng-show="focused">
+				<li class="menu-option" ng-repeat="result in results">{{result.img}}  {{result.name}}</li>
+			</ul>
+			<ul  ng-hide="focused">
+				
+				<li class="menu-option">
+					<a ng-tap="$navigate.go('/trips')">
+						<i class="menu-icon icon-trip" ></i> 
+						<span class="menu-option-title">Trips</span>
+					</a>
+				</li>
+				
+				<li class="menu-option menu-option-border">
+					<a ng-tap="$navigate.go('/friends')">
+						<i class="menu-icon icon-group" ></i> 
+						<span class="menu-option-title">Friends</span>
+					</a> 
+				</li>
+
+				<li class="menu-option">
+					<a ng-tap="$navigate.go('/profile')">
+						<i class="menu-icon icon-profile" ></i> 
+						<span class="menu-option-title">Profile</span>
+					</a>  
+				</li>
+			</ul>
+		</typeahead>
+	</div>
+	<div ng-controller="FooterCtrl">
+		<footer class="home-footer" data-role="footer" data-position="fixed" >
+			<div ng-controller="ProfileCtrl">
+				<div class="user-photo-div">
+					<i class="user-photo {{user.img}}"></i>
+				</div>
+				<div class="progress-name-div">
+					<div class="progress progress-striped active awesome-bar-size awesome-bar-back-color ">
+		  				<div class="progress-bar awesome-bar-size awesome-bar-color"  role="progressbar" aria-valuenow="60" 	aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+	    				<span class="sr-only">45% Complete</span>
+	  					</div>
+					</div>
+				
+					<div class="name-div">
+			 			<span class="name"> {{user.name}} </span>
+		 			</div>  
+
+				</div>
+			</div>
+			        
+		</footer>
+	</div>
