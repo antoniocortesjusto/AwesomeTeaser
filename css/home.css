@@ -15,6 +15,7 @@ body h1 {
 	text-shadow: 0px 1px 0px rgba(1, 5, 8, 0.4);
 	display: inline-block;
 	padding-top: 50px;
+	color: #555555; 
 
 }
 
@@ -171,6 +172,13 @@ form#subscribe div.alert{
 	margin-top: 10px;
 	width: 467px;
 	padding:3px;
+}
+
+div#subscriptionresult div.alert{
+	margin-top: 10px;
+	width: 650px;
+	padding:5px;
+	text-align: center;
 }
 
 

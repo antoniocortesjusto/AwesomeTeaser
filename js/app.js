@@ -30,6 +30,11 @@ Awesome.config(function($routeProvider, $sceDelegateProvider) {
     controller: 'PithCtrl'
   });
 
+   $routeProvider.when('/thanks', {
+    templateUrl: 'html/thanks.html',
+    controller: 'ThanksCtrl'
+  });
+
    $routeProvider.when('/elevator', {
     redirectTo: '/pitch'
   });

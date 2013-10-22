@@ -110,7 +110,7 @@
           <br>
           <p class="lead"><h4>To obtain early access to <span class ="highlight">Awesome</span> please Subscribe! <h4></p>
           <br>
-          <form novalidate id="subscribe" name="subscribeForm" class="form-inline" role="form" ng-submit="subscribe()">
+          <form novalidate id="subscribe" name="subscribeForm" class="form-inline" role="form" ng-hyde="Subscription.subcriptionDone" ng-submit="subscribe()">
             <div class="form-group">
               <label class="sr-only" for="inputEmail">Email address</label>
               <input required unique name="email" ng-model="User.email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"  showerrorblur>
@@ -127,8 +127,17 @@
             <div id="groupalerts" ng-show="subscribeForm.group.$dirty && subscribeForm.group.$invalid && !subscribeForm.group.$focused">
               <div id="alertgrouplength" ng-show="subscribeForm.group.$error.maxlength" class="alert alert-danger"> The group name cannot be longer than 15 characters.</div>
               <div id="alertgrouplength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
-          </div>
+            </div>
           </form>
+          <div id="subscriptionresult" ng-show="Subscription.subcriptionDone">
+            <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult">
+                You have successfully registered with group: {{User.group}}.<br>
+                Soon you will receive a conformation email in: {{User.email}}
+            </div>
+            <div id="subscriptionerror" class="alert alert-danger" ng-hyde="Subscription.subscriptionResult">
+              Sorry an error accurred, pelase try again later.
+            </div>
+          <div>
       </div>
     </div>
   </main>
