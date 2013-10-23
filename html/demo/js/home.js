@@ -16,9 +16,4 @@ function loadScript() {
   document.body.appendChild(script);
 }
 
-window.onload = loadScript;
-
-
-function showSearch(){
-  
-}
+//window.onload = loadScript;

@@ -3,29 +3,29 @@ var services = angular.module('services', []);
 
 services.factory('Friends', function(){
 	var Friends = [
-  					{	img: "foto", name: "Toño"},
-  					{	img: "foto", name: "Pedro"},
-  					{	img: "foto", name: "Juan"},
-  					{	img: "foto", name: "Miguel"},
-  					{	img: "foto", name: "Alvaro"},
-  					{	img: "foto", name: "Pablo"},
-  					{	img: "foto", name: "Ernesto"},
-  					{	img: "foto", name: "Rodrigo"},
-  					{	img: "foto", name: "Manuel"},
-  					{	img: "foto", name: "Juan Manuel"},
-  					{	img: "foto", name: "Jose"},
-  					{	img: "foto", name: "Antonio"},
-  					{	img: "foto", name: "Jose Miguel"},
-  					{	img: "foto", name: "Jose Antonio"},
-  					{	img: "foto", name: "Andres"},
-  					{	img: "foto", name: "Luis"}];
+  					{	img: "icon-user", name: "Toño"},
+  					{	img: "icon-user", name: "Pedro"},
+  					{	img: "icon-user", name: "Juan"},
+  					{	img: "icon-user", name: "Miguel"},
+  					{	img: "icon-user", name: "Alvaro"},
+  					{	img: "icon-user", name: "Pablo"},
+  					{	img: "icon-user", name: "Ernesto"},
+  					{	img: "icon-user", name: "Rodrigo"},
+  					{	img: "icon-user", name: "Manuel"},
+  					{	img: "icon-user", name: "Juan Manuel"},
+  					{	img: "icon-user", name: "Jose"},
+  					{	img: "icon-user", name: "Antonio"},
+  					{	img: "icon-user", name: "Jose Miguel"},
+  					{	img: "icon-user", name: "Jose Antonio"},
+  					{	img: "icon-user", name: "Andres"},
+  					{	img: "icon-user", name: "Luis"}];
   
   	return Friends;
 });
 
 services.factory('User', function(){
   var User = {
-          img: "icon-user",
+          img: "glyphicon glyphicon-user",
           name: "Juan Soler",
           email: "juan.soler@awesome.do",
           telNumber: "636837248"};
@@ -35,15 +35,9 @@ services.factory('User', function(){
 
 services.factory('Results', function () {
   var Results = [
-            { img: "foto", name: "Toño"},
-            { img: "foto", name: "Pedro"},
-            { img: "foto", name: "Juan"}];
+            { img: "icon-trip", name: "Madrid"},
+            { img: "icon-trip", name: "Barcelona"},
+            { img: "icon-trip", name: "Valencia"}];
             
   return Results;
-});
-
-services.factory('Search', function () {
-  var Search = {message: ""};
-
-  return Search;
 });

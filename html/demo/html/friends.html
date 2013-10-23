@@ -15,7 +15,8 @@
 	<div class="friends-list">
 		<ul class= "list-group">
 				<li class="list-group-item" ng-repeat="friend in friends | filter:searchFriend">
-					{{friend.img}}  {{friend.name}}</li>
+					<i class="{{friend.img}} result-icon"></i>  <span class="friend-name">{{friend.name}}</span>
+				</li>
 		</ul>
 	<div>
 
