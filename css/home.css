@@ -45,12 +45,18 @@ body h1 {
 .awesome-info{
 	display: inline;
 	overflow: auto;
+	font-family: Museo;
 }
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
+	font-family: Museo;
+	color: #555555;
+}
+
 .iphone{
 	float: right;
 	padding-top: 100px;
 	width: 320px;
-	
 }
 
 
@@ -66,7 +72,6 @@ div#carouselPreview ol.carousel-indicators {
 
 
 .carousel-indicators li{
-    
     border-color: rgba(117, 0, 201, 1);
 }
 .carousel-indicators .active{
@@ -82,10 +87,12 @@ div#carouselPreview ol.carousel-indicators {
 .highlight{
 	color: rgba(117, 0, 201, 1);
 }
-.logo-image{
-	padding-bottom: 40px;
-	
 
+.logo-image{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	height: 250px;
+	width: auto;
 }
 
 .awesome-container{
@@ -99,7 +106,7 @@ div#carouselPreview ol.carousel-indicators {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-  	min-height: 740px;
+  	min-height: 700px;
   	z-index: 10;
   	padding-bottom: 5px; /*Footer height*/
   	height: 100%;
@@ -111,7 +118,6 @@ div#carouselPreview ol.carousel-indicators {
 	
 	position:absolute;
 	width: 100%;
-
 	top:0;
 	left:0;
 	font-family: Museo;
@@ -120,7 +126,7 @@ div#carouselPreview ol.carousel-indicators {
   	-moz-background-size: cover;
   	-o-background-size: cover;
   	background-size: cover;
-  	min-height: 740px;
+  	min-height: 700px;
   	z-index: -10;
   	height: 100%;
 
@@ -132,6 +138,7 @@ div#carouselPreview ol.carousel-indicators {
 	min-width: 100%;
 	height: 5px;
 	background-color: rgba(117, 0, 201, 1);
+	z-index: 20;
 }
 .bottom{
 	position: absolute;
@@ -158,7 +165,10 @@ form#subscribe .submit-button:hover{
 	border-color: rgba(117, 0, 201, 0.8);
 }
 
-
+input#group:disabled{
+	background-color: #e3ccf4;
+	border-color: rgba(117, 0, 201, 1);
+}
 
 .form-control:focus{
 	border-color: rgb(117, 0, 201);

@@ -3,7 +3,12 @@
 	<div ng-controller="HomeCtrl">
 		<typeahead>
 			<ul  ng-show="focused">
-				<li class="menu-option" ng-repeat="result in results">{{result.img}}  {{result.name}}</li>
+				<li class="menu-option" ng-repeat="result in search.results | filter:search.message">
+					<i class="result-icon {{result.img}}"></i>  {{result.name}}
+				</li>
+				<li class="menu-option" ng-repeat="friend in search.friends | filter:search.message">
+					<i class="result-icon {{friend.img}}"></i>  {{friend.name}}
+				</li>
 			</ul>
 			<ul  ng-hide="focused">
 				
@@ -31,20 +36,20 @@
 		</typeahead>
 	</div>
 	<div ng-controller="FooterCtrl">
-		<footer class="home-footer" data-role="footer" data-position="fixed" >
+		<footer class="home-footer" data-role="footer" data-position="fixed">
 			<div ng-controller="ProfileCtrl">
 				<div class="user-photo-div">
 					<i class="user-photo {{user.img}}"></i>
 				</div>
 				<div class="progress-name-div">
-					<div class="progress progress-striped active awesome-bar-size awesome-bar-back-color ">
+					<div class="progress active awesome-bar-size awesome-bar-back-color ">
 		  				<div class="progress-bar awesome-bar-size awesome-bar-color"  role="progressbar" aria-valuenow="60" 	aria-valuemin="0" aria-valuemax="100" style="width: 60%">
 	    				<span class="sr-only">45% Complete</span>
 	  					</div>
 					</div>
 				
 					<div class="name-div">
-			 			<span class="name"> {{user.name}} </span>
+			 			<span class="home-footer-name"> {{user.name}} </span>
 		 			</div>  
 
 				</div>

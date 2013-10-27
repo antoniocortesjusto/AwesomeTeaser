@@ -5,16 +5,30 @@ controllers.controller('MainCtrl', function($scope, $navigate) {
   
 });
 
-controllers.controller('HomeCtrl', function($scope, Results, Search){
-	$scope.results = Results;
-	$scope.search = Search;
+controllers.controller('HomeCtrl', function($scope, Results, Friends){
+  $scope.search = {};
+	$scope.search.results = {};
+  $scope.search.friends = {};
+	$scope.search.message = "";
+  // $scope.inputCleared = false;
 
 	 $scope.resetInput = function(){
    		$scope.search.message = "";
+      $scope.showResults();
    		$scope.showClear = false;
 
    		console.log("reset input! showClear = false");
-	 }
+	 };
+
+   $scope.showResults = function(){
+      if($scope.search.message == "" || typeof $scope.search.message == 'undefined') {
+        $scope.search.results = {};
+        $scope.search.friends = {};
+      } else {
+        $scope.search.results = Results;
+        $scope.search.friends = Friends;
+      }
+   };
   	
 });
 
@@ -43,5 +57,5 @@ controllers.controller('FooterCtrl', function($scope) {
     else{
         $("[data-role=footer]").show();
     }
-});
+  });
 });

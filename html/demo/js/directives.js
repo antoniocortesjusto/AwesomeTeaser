@@ -40,7 +40,7 @@ directives.directive('typeahead', function(){
                           '<img class="home-awesome-icon" src="img/awesome_icon.png">' +
                         '</button>' +
                         '<div id="search" class= "container">' +
-                          '<input ng-focus="focused" class="searchInput input-lg form-control" type="text" placeholder="Search places or people" ng-model="search.message">' +
+                          '<input ng-focus="focused" class="searchInput input-lg form-control" type="text" placeholder="Search places/people" ng-model="search.message">' +
                           '<i class="icon-clear clear-btn" ng-click="resetInput()" ng-show="showClear">' + '</i>' +
                         '</div>' +                        
                       '</div>' +
@@ -64,26 +64,32 @@ directives.directive('typeahead', function(){
 
 
       $input.bind('focus', function() {
-          $scope.$apply(function() { console.log("focused = true");$scope.focused = true; });
+          $scope.$apply(function() {console.log("focused = true");
+                                    $scope.focused = true; });
       });
 
       $input.bind('blur', function() {
-          $scope.$apply(function() { console.log("focused = false");$scope.focused = false; });
+          $scope.$apply(function() {console.log("focused = false");
+                                    //$scope.inputCleared = true;
+                                    $scope.focused = false; });
       });
 
       $input.bind('keydown', function() {
-          $scope.$apply(function() { console.log("showClear = false");$scope.showClear = false; });
+          $scope.$apply(function() {console.log("showClear = false");
+                                    $scope.showClear = false; 
+                                    });
       });
 
       $input.bind('keyup', function() {
           $scope.$apply(function() {console.log("showClear = true");
-                                        $scope.showClear = true; });
+                                        $scope.showClear = true;
+                                        $scope.showResults();});
       });
 
-      $i.bind('click', function() {
+      /*$i.bind('click', function() {
           $input.trigger("focus");
           console.log("Input focused!!!");
-      });
+      });*/
       
     }
   };
