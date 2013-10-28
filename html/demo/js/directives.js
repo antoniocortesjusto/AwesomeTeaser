@@ -62,8 +62,6 @@ directives.directive('typeahead', function(){
       $scope.focused = false;
       $scope.showClear = false;
 
-      var mouseFix = true;
-
 
       $input.bind('focus', function() {
           $scope.$apply(function() {console.log("focused = true");
@@ -71,11 +69,9 @@ directives.directive('typeahead', function(){
       });
 
       $input.bind('blur', function() {
-        if(mouseFix){
           $scope.$apply(function() {console.log("focused = false");
                                     //$scope.inputCleared = true;
                                     $scope.focused = false; });
-        }
       });
 
       $input.bind('keydown', function() {
@@ -86,24 +82,14 @@ directives.directive('typeahead', function(){
 
       $input.bind('keyup', function() {
           $scope.$apply(function() {console.log("showClear = true");
-                                        if($scope.search.message != ""){
-                                          $scope.showClear = true;
-                                        }
+                                        $scope.showClear = true;
                                         $scope.showResults();});
       });
 
-      $i.bind('click', function() {
+      /*$i.bind('click', function() {
           $input.trigger("focus");
           console.log("Input focused!!!");
-      });
-
-      $i.bind('mouseenter', function(){
-          mouseFix = false;
-      });
-
-      $i.bind('mouseleave', function(){
-          mouseFix = true;
-      });
+      });*/
       
     }
   };

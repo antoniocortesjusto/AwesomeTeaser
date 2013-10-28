@@ -1,6 +1,6 @@
 <div ng-controller="ProfileCtrl" id ="header "> 
 	<div class=" container home-header">
-		<button ng-click="$navigate.go('/', true)" id="btn-awesome-profile" type="button" class= "btn-awesome-header" >
+		<button ng-click="$navigate.go('/')" id="btn-awesome-profile" type="button" class= "btn-awesome-header" >
 				<img class="home-awesome-icon" src="img/awesome_icon.png">
 		</button>
 		<div id="profile-title" class= "container section-title-container">
@@ -20,23 +20,26 @@
 				</div>
 			</div>
 			<div class="form-group">
-	    		<label for="inputName" class="profile-label col-lg-2 control-label">Name</label>
+	    		<label for="inputName" class="col-lg-2 control-label">Name</label>
 	    		<div class="col-lg-10">
 	    			<input type="name" class="form-control profile-input" id="inputName" value={{user.name}}>
 	    		</div>
 	  		</div>
 	  		<div class="form-group">
-	    		<label for="inputEmail1" class="profile-label col-lg-2 control-label">Email</label>
+	    		<label for="inputEmail1" class="col-lg-2 control-label">Email</label>
 	    		<div class="col-lg-10">
 	    			<input type="email" class="form-control profile-input" id="inputEmail1" value={{user.email}}>
 	    		</div>
 	  		</div>
-	  	</form>
-	</div>
-	<div class="profile-setBtn container">
-		<button type="button"  id="profile-set-btn" class="btn btn-default btn-lg">Settings 
-			<i class="icon-set profile-set-icon"></i>
-		</button>
+			<div class="form-group profile-setBtn">
+				<label for="profile-set-btn" class="col-lg-2 control-label"></label>
+				<div class="col-lg-10">
+					<button type="button"  id="profile-set-btn" class="btn btn-default btn-lg">Settings 
+						<i class="icon-set profile-set-icon"></i>
+					</button>
+				</div>
+			</div>
+		</form>
 	</div>
 	
 </div>
