@@ -33,7 +33,6 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
       console.log("MailChimp.subscribe() Post success ==> " + "data.groups: " + data + " status: " + status);
         $scope.Subscription.subscriptionResult = true;
         $scope.Subscription.subscriptionDone = true;
-        console.log("subscriptionDone: " + $scope.Subscription.subscriptionDone + " subscriptionResult: " + $scope.Subscription.subscriptionResult)
     };
 
     var handleSubscribeError = function(data, status){
@@ -74,16 +73,16 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
 
 /*Controller to register via URL routing*/
 
-controllers.controller('RegisterCtrl', function($scope, $route, $routeParams, MailChimp){
+controllers.controller('RegisterCtrl', function($scope, $route, $routeParams, Mailchimp){
 	
-	params = {
+	$scope.params = {
 		groupId : $routeParams.groupId
 	};
 	
   $scope.Subscription ={};
   $scope.Subscription.subscriptionDone = false;
 
-  $scope.User ={email: '', group: params.groupId};
+  $scope.User ={email: '', group: ''};
     var handlePingSuccess = function(data, status){
       console.log("ChimpPing Post success ==> " + "data.msg: " + data.msg + " status: " + status);
         $scope.chimpPing = data.msg;
@@ -98,7 +97,6 @@ controllers.controller('RegisterCtrl', function($scope, $route, $routeParams, Ma
       console.log("MailChimp.subscribe() Post success ==> " + "data.groups: " + data + " status: " + status);
         $scope.Subscription.subscriptionResult = true;
         $scope.Subscription.subscriptionDone = true;
-        console.log("subscriptionDone: " + $scope.Subscription.subscriptionDone + " subscriptionResult: " + $scope.Subscription.subscriptionResult)
     };
 
     var handleSubscribeError = function(data, status){

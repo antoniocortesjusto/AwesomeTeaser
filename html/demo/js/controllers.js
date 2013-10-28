@@ -6,10 +6,7 @@ controllers.controller('MainCtrl', function($scope, $navigate) {
 });
 
 controllers.controller('HomeCtrl', function($scope, Results, Friends){
-<<<<<<< HEAD
-=======
   loadScript();
->>>>>>> 679aadb2ee52a2f8fafe7822a9f323d770954482
   $scope.search = {};
 	$scope.search.results = {};
   $scope.search.friends = {};
@@ -33,11 +30,8 @@ controllers.controller('HomeCtrl', function($scope, Results, Friends){
         $scope.search.friends = Friends;
       }
    };
-<<<<<<< HEAD
-=======
 
 
->>>>>>> 679aadb2ee52a2f8fafe7822a9f323d770954482
   	
 });
 
@@ -52,8 +46,8 @@ controllers.controller('ProfileCtrl', function($scope, User){
 
 });
 
-controllers.controller('TripsCtrl', function($scope){
-	
+controllers.controller('TripsCtrl', function($scope, Trips){
+	$scope.trips = Trips;
 
 });
 

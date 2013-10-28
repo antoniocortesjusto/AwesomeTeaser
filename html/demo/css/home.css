@@ -209,11 +209,7 @@ div#search input.searchInput:focus{
 		font-size:20px;
 		border-radius: 0px;
 		padding-right: 20px;
-<<<<<<< HEAD
-		padding-left: 15px;
-=======
 		padding-left: 14px;
->>>>>>> 679aadb2ee52a2f8fafe7822a9f323d770954482
 	}
 }
 
@@ -310,8 +306,6 @@ footer div.awesome-bar-back-color{
 	
 }
 /**profile style**/
-<<<<<<< HEAD
-=======
 
 .profile-data {
 	position:absolute;
@@ -379,72 +373,8 @@ div.profile-data form.form-horizontal div.form-group label.profile-label{
 	font-weight: @weight-bold;
 	src: url('../res/fonts/Museo500-Regular.otf');
 }
->>>>>>> 679aadb2ee52a2f8fafe7822a9f323d770954482
-
-.profile-data {
-	position:absolute;
-	
-	padding-top: 60px;
-	width: 100%;
-}
-.profile-number {
-	font-size: 35px;
-	padding-left: 40px;
-}
-
-.profile-number-container{
-	padding-top: 20px;
-}
-
-div.profile-data form.form-horizontal div.form-group input.profile-input{
-	border-radius: 0px;
-	font-size: 20px;
-}
-
-div.profile-data form.form-horizontal div.form-group input.profile-input:focus{
-	border-color: #7500C9;
-	outline: 0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(117, 0, 201,0.6);
-	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075),0 0 8px rgba(117, 0, 201,0.6);
-}
-
-.profile-setBtn {
-	text-align: center;
-}
-#profile-set-btn {
-	border-radius: 0px;
-	width: 100%;
-    text-align:center;
-    min-width: 120px;
-}
-
-.profile-set-icon{
-	color: #7500C9;
-}
-
-#profile-set-btn:hover{
-	border-color: #7500C9;
-	background-color: white;
-}
-
-<<<<<<< HEAD
-
-/** Adding museo fonts**/
-
-@font-face { 
-	font-family: Museo;
-	font-weight: @weight-regular;
-	src: url('../res/fonts/Museo300-Regular.otf');
-}
-@font-face { 
-	font-family: Museo;
-	font-weight: @weight-bold;
-	src: url('../res/fonts/Museo500-Regular.otf');
-}
 
 
-=======
->>>>>>> 679aadb2ee52a2f8fafe7822a9f323d770954482
 /** Add fontello icons as fonts **/
 
 @font-face {

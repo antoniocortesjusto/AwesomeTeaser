@@ -1,5 +1,3 @@
-  
-
 <div class= "container">
       
   <main class="content" id="content" role="main">
@@ -97,8 +95,9 @@
         
       </div>
     </div>
-    <div id="logo">
-      <img class="logo-image"src="img/Awesome_Logo.png">
+    <div id="logo" class="">
+      <img class="logo-image"src="img/awesome_icon.png">
+      <h1>Awesome</h1>
     </div>
 
     <div class="container ">
@@ -106,16 +105,17 @@
           <p><h3> Awesome helps you and your friends to create and  manage 
           <br>your events in a natural simple and fun way.</h3></p>
           <br>
+          <br>
           <p class="lead"><h4>To obtain early access to <span class ="highlight">Awesome</span> please Subscribe! <h4></p>
           <br>
-          <form novalidate id="subscribe" name="subscribeForm" class="form-inline" role="form" ng-hide="Subscription.subscriptionDone" ng-submit="subscribe()">
+          <form novalidate id="subscribe" name="subscribeForm" class="form-inline" role="form" ng-hyde="Subscription.subcriptionDone" ng-submit="subscribe()">
             <div class="form-group">
               <label class="sr-only" for="inputEmail">Email address</label>
               <input required unique name="email" ng-model="User.email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"  showerrorblur>
             </div>
             <div class="form-group">
               <label class="sr-only" for="inputGroup">Group</label>
-              <input name ="group" id="group" ng-disabled="true" ng-model="User.group" type="text" class="form-control" id="inputGroup" placeholder="Name your group!!" ng-minlength="5" ng-maxlength="15" showerrorblur>
+              <input name ="group" value="params.GroupId" ng-disabled="true" ng-model="User.group" type="text" class="form-control" id="inputGroup" placeholder="Name your group!!" ng-minlength="5" ng-maxlength="15" showerrorblur>
             </div>
             <button type="submit" ng-disabled="subscribeForm.$invalid" class="submit-button btn btn-default">Submit</button>
             <div id="emailalerts" ng-show="subscribeForm.email.$dirty && subscribeForm.email.$invalid && !subscribeForm.email.$focused">
@@ -127,20 +127,19 @@
               <div id="alertgrouplength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
             </div>
           </form>
-          <div id="subscriptionresult" ng-show="Subscription.subscriptionDone">
+          <div id="subscriptionresult" ng-show="Subscription.subcriptionDone">
             <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult">
                 You have successfully registered with group: {{User.group}}.<br>
-                Soon you will receive a confirmation email to: {{User.email}}
+                Soon you will receive a conformation email in: {{User.email}}
             </div>
-            <div id="subscriptionerror" class="alert alert-danger" ng-hide="Subscription.subscriptionResult">
+            <div id="subscriptionerror" class="alert alert-danger" ng-hyde="Subscription.subscriptionResult">
               Sorry an error accurred, pelase try again later.
             </div>
-          </div>
+          <div>
       </div>
     </div>
   </main>
 </div>
-<div class=" bottom purple-line purple-animate" ></div>
 
 
               
