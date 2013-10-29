@@ -1,11 +1,23 @@
 <div ng-controller="TripsCtrl" id ="header "> 
 	<div class=" container home-header">
-		<button ng-click="$navigate.go('/')" id="btn-awesome-trips" type="button" class= "btn-awesome-header" >
+		<button ng-click="$navigate.go('/', true)" id="btn-awesome-trips" type="button" class= "btn-awesome-header" >
 				<img class="home-awesome-icon" src="img/awesome_icon.png">
 		</button>
 		<div id="trips-title" class= "container section-title-container">
 			<span class="section-title">Trips</span>
   		</div>
 	</div>
+
+	<div id="search" class= "container home-header-menu">
+  			<input ng-model="searchTrip.name" class="searchInput input-lg form-control" type="text" placeholder="Search trips">
+	</div>
+
+	<div class="trips-list">
+		<ul class= "list-group">
+				<li class="list-group-item list-group-trip-item" ng-repeat="trip in trips | filter:searchTrip">
+					<i class="{{trip.img}} result-icon-trip"></i>  <span class="trip-name">{{trip.name}}</span>
+				</li>
+		</ul>
+	<div>
 	
 </div>

@@ -6,6 +6,7 @@ controllers.controller('MainCtrl', function($scope, $navigate) {
 });
 
 controllers.controller('HomeCtrl', function($scope, Results, Friends){
+  loadScript();
   $scope.search = {};
 	$scope.search.results = {};
   $scope.search.friends = {};
@@ -29,6 +30,8 @@ controllers.controller('HomeCtrl', function($scope, Results, Friends){
         $scope.search.friends = Friends;
       }
    };
+
+
   	
 });
 
@@ -43,8 +46,8 @@ controllers.controller('ProfileCtrl', function($scope, User){
 
 });
 
-controllers.controller('TripsCtrl', function($scope){
-	
+controllers.controller('TripsCtrl', function($scope, Trips){
+	$scope.trips = Trips;
 
 });
 

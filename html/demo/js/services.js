@@ -41,3 +41,14 @@ services.factory('Results', function () {
             
   return Results;
 });
+
+services.factory('Trips', function(){
+  var Trips = [
+            { img: "glyphicon glyphicon-map-marker", name: "Toño's birthday"},
+            { img: "glyphicon glyphicon-map-marker", name: "Pedro's homecoming"},
+            { img: "glyphicon glyphicon-map-marker", name: "New Year's Eve"},
+            { img: "glyphicon glyphicon-map-marker", name: "Miguel's party"},
+            { img: "glyphicon glyphicon-map-marker", name: "Alvaro's shop opening"},];
+  
+    return Trips;
+});
