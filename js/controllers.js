@@ -65,11 +65,21 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
     };
 
     function tumblrInitialize(){
-      var tumblr_link_url = "http://awesome.do/#/register/" + User.group;
+      var tumblr_link_url = "http://awesome.do/#/register/" + $scope.User.group;
       var tumblr_link_name = "I just registered to Awesome. Join me!";
       var tumblr_link_description = "The more we are the sooner we will get access";
   
       $scope.tumblrURL = "http://www.tumblr.com/share/link?url=" + encodeURIComponent(tumblr_link_url) + "&name=" + encodeURIComponent(tumblr_link_name) + "&description=" + encodeURIComponent(tumblr_link_description);
+    }
+
+    function twitterInitialize(){
+      var shareURL = "http://awesome.do/#/register/" + $scope.User.group;
+      var text = "I just registered to Awesome. Join me! The more we are the sooner we will get access";
+      var via = "AwesomeApp";
+
+
+      $scope.twitterURL = "" + encodeURIComponent(shareURL) + "&text=" + encodeURIComponent(text) + "&via=AwesomeApp&hashtags=AwesomeRegistration&count=none";
+      
     }
 
     function loadCarrousel(){
@@ -83,6 +93,8 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
     }
     
     loadCarrousel();
+
+    twitterInitialize();
 
 
   	
