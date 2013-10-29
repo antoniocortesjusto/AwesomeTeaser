@@ -5,8 +5,8 @@ var Awesome =angular.module("AwesomeTeaser", ['filters', 'controllers', 'directi
 Awesome.config(function($routeProvider, $sceDelegateProvider) {
   
   $routeProvider.when('/register/:groupId', {
-    templateUrl: 'html/group.html',
-    controller: 'RegisterCtrl'
+    templateUrl: 'html/home.html',
+    controller: 'HomeCtrl'
     
   });
   

@@ -115,7 +115,7 @@
           </div>
           <div class="form-group">
             <label class="sr-only" for="inputGroup">Group</label>
-            <input name ="group" ng-model="User.group" type="text" class="form-control" id="inputGroup" placeholder="Name your group!!" ng-minlength="5" ng-maxlength="15" showerrorblur>
+            <input name ="group" id="group" ng-disabled="Params.invited" ng-model="User.group" type="text" class="form-control" id="inputGroup" placeholder="Name your group!!" ng-minlength="5" ng-maxlength="15" ng-pattern="/^\S*$/" showerrorblur>
           </div>
           <button type="submit" ng-disabled="subscribeForm.$invalid" class="submit-button btn btn-default">Submit</button>
           <div id="emailalerts" ng-show="subscribeForm.email.$dirty && subscribeForm.email.$invalid && !subscribeForm.email.$focused">
@@ -123,8 +123,9 @@
             <div id="alertemailrequired" ng-show="subscribeForm.email.$error.required || subscribeForm.email.$error.email " class="alert alert-danger"> Please input a valid email.</div>
           </div>
           <div id="groupalerts" ng-show="subscribeForm.group.$dirty && subscribeForm.group.$invalid && !subscribeForm.group.$focused">
-            <div id="alertgrouplength" ng-show="subscribeForm.group.$error.maxlength" class="alert alert-danger"> The group name cannot be longer than 15 characters.</div>
-            <div id="alertgrouplength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
+            <div id="alertgroupmaxlength" ng-show="subscribeForm.group.$error.maxlength" class="alert alert-danger"> The group name cannot be longer than 15 characters.</div>
+            <div id="alertgroupminlength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
+            <div id="alertgroupminlength" ng-show="subscribeForm.group.$error.pattern" class="alert alert-danger"> The group can´t contain white spaces.</div>
           </div>
         </form>
         <div id="subscriptionresult" ng-show="Subscription.subscriptionDone" > 

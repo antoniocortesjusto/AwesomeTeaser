@@ -12,15 +12,26 @@ controllers.controller('MainCtrl', function($scope, $route) {
 });
 
 
-/*Controller for regitering at hompage*/
-controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
-	
+/*Controller for registering at hompage and regitering with group routeParam*/
+controllers.controller('HomeCtrl', function($scope, $route, $routeParams, MailChimp){
+  
+  $scope.Params ={};
+  console.log("routeParams: " + $routeParams.groupId);
+  console.log("typeof $routeParams.groupID == 'undefined'" + typeof $routeParams.groupId == 'undefined');
+  if(!(typeof $routeParams.groupId == 'undefined')){
+    $scope.User ={email: '', group: $routeParams.groupId};
+    $scope.Params.invited = true;
+  }
+  else{
+    $scope.User ={email: '', group: ''};
+    $scope.Params.invited = false;
+  }
   $scope.Subscription ={};
   $scope.Subscription.subscriptionDone = false;
   $scope.shareURLS = {twitterURL: "", facebookURL: "", googlePlusURL: "", tumblrURL: "", pinterestURL: ""};
   var shareURL = "http://awesome.do/#/register/";
 
-  $scope.User ={email: '', group: ''};
+  
   	var handlePingSuccess = function(data, status){
   		console.log("ChimpPing Post success ==> " + "data.msg: " + data.msg + " status: " + status);
       	$scope.chimpPing = data.msg;
@@ -101,75 +112,8 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
     
     loadCarrousel();
 
-    
-
-
-  	
 });
 
-
-/*Controller to register via URL routing*/
-
-controllers.controller('RegisterCtrl', function($scope, $route, $routeParams, MailChimp){
-	
-	params = {
-		groupId : $routeParams.groupId
-	};
-	
-  $scope.Subscription ={};
-  $scope.Subscription.subscriptionDone = false;
-
-  $scope.User ={email: '', group: params.groupId};
-    var handlePingSuccess = function(data, status){
-      console.log("ChimpPing Post success ==> " + "data.msg: " + data.msg + " status: " + status);
-        $scope.chimpPing = data.msg;
-    };
-
-    var handlePingError = function(data, status){
-      console.log("ChimpPing Post error ==> " + "data: " + data.name + " status: " + status);
-        $scope.chimpPing = data.name;
-    };
-
-    var handleSubscribeSuccess = function(data, status){
-      console.log("MailChimp.subscribe() Post success ==> " + "data.groups: " + data + " status: " + status);
-        $scope.Subscription.subscriptionResult = true;
-        $scope.Subscription.subscriptionDone = true;
-        console.log("subscriptionDone: " + $scope.Subscription.subscriptionDone + " subscriptionResult: " + $scope.Subscription.subscriptionResult)
-    };
-
-    var handleSubscribeError = function(data, status){
-      console.log("MailChimp.subscribe() Post error ==> " + "data: " + data.name + " status: " + status);
-        $scope.Subscription.subscriptionResult = false;
-        $scope.Subscription.subscriptionDone = true;
-    };
-
-
-    $scope.subscribe = function(){
-
-      if($scope.subscribeForm.$valid){
-            
-            console.log("Subscribing email: " + $scope.User.email + "group: " + $scope.User.group);
-            MailChimp.subscribe($scope.User.email, $scope.User.group).success(handleSubscribeSuccess).error(handleSubscribeError);
-          }
-      else{
-        $scope.subscriptionResult = "Error Form not valid!";
-      }
-
-    };
-
-
-    function loadCarrousel(){
-      var carousel = $('.carousel');
-      carousel.carousel({
-                   interval: 5000,
-                      cycle: true
-             });
-             console.log("Carousel script");
-      carousel.carousel().next();
-    }
-    
-    loadCarrousel();
-});
 
 
 /*Team Controller*/
