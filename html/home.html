@@ -127,10 +127,44 @@
             <div id="alertgrouplength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
           </div>
         </form>
-        <div id="subscriptionresult" ng-show="Subscription.subscriptionDone">
-          <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult">
+        <!-- <div id="subscriptionresult" ng-show="Subscription.subscriptionDone" > -->
+        <div id="subscriptionresult"  >
+          <!-- <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult"> -->
+          <div id="subscriptionsuccess" class="alert alert-success" >
               You have successfully registered with group: {{User.group}}.<br>
-              Soon you will receive a confirmation email to: {{User.email}}
+              Soon you will receive a confirmation email to: {{User.email}}<br>
+              Meanwhile why not invite your friends to join you?
+              <div id="sharebuttons">
+                <!-- Twitter share -->
+                <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://awesome.do/#/register/{{User.group}}" data-text="I just registered to Awesome. Join my group now!" data-via="AwesomeApp" data-size="large" data-count="none" data-hashtags="AwesomeRegistration">Tweet</a>
+                
+
+                <!-- Facebook share -->
+
+                <a href="#" ng-click="facebookShare()">
+                  Share on Facebook
+                </a>
+
+                <!-- Google Plus share -->
+
+                
+                <div class="g-plus" data-action="share" data-annotation="bubble" data-annotation="none" data-href="http://awesome.do/#/register/{{User.group}}">
+                </div>
+
+                
+                
+
+                <!-- Tumblr share-->
+                <a href="{{tumblrURL}}" title="Share on Tumblr" class="tumblr-btn">Share on Tumblr</a> 
+
+               
+
+                <!-- Pinterest share-->
+
+                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fawesome.do%2F%23%2Fregister%2F{{User.group}}&media=http%3A%2F%2Fawesome.do%2Fimg%2FAwesome_Logo.png&description=Join%20my%20group%20!" data-pin-do="buttonPin" data-pin-config="above"><img src="//assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>
+
+                <script type="text/javascript" src="//assets.pinterest.com/js/pinit.js"></script>
+              </div>
           </div>
           <div id="subscriptionerror" class="alert alert-danger" ng-hide="Subscription.subscriptionResult">
             Sorry an error accurred, pelase try again later.
