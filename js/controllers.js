@@ -17,7 +17,8 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
 	
   $scope.Subscription ={};
   $scope.Subscription.subscriptionDone = false;
-  $scope.tumblrURL = "";
+  $scope.shareURLS = {twitterURL: "", facebookURL: "", googlePlusURL: "", tumblrURL: "", pinterestURL: ""};
+  var shareURL = "http://awesome.do/#/register/";
 
   $scope.User ={email: '', group: ''};
   	var handlePingSuccess = function(data, status){
@@ -35,6 +36,10 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
         $scope.Subscription.subscriptionResult = true;
         $scope.Subscription.subscriptionDone = true;
         tumblrInitialize();
+        twitterInitialize();
+        googlePlusInitialize();
+        facebookInitialize();
+        pinterestInitialize();
         console.log("subscriptionDone: " + $scope.Subscription.subscriptionDone + " subscriptionResult: " + $scope.Subscription.subscriptionResult)
     };
 
@@ -58,28 +63,30 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
 
     };
 
-    $scope.facebookShare = function(){
-      console.log("FAcebookshare");
-      window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent('http://awesome.do//#register/' + $scope.User.group), 'facebook-share-dialog', 'width=626,height=436'); 
-    return false;
+    function facebookInitialize(){
+      $scope.shareURLS.facebookURL = "" + encodeURIComponent(shareURL + $scope.User.group);
     };
 
     function tumblrInitialize(){
-      var tumblr_link_url = "http://awesome.do/#/register/" + $scope.User.group;
       var tumblr_link_name = "I just registered to Awesome. Join me!";
       var tumblr_link_description = "The more we are the sooner we will get access";
   
-      $scope.tumblrURL = "http://www.tumblr.com/share/link?url=" + encodeURIComponent(tumblr_link_url) + "&name=" + encodeURIComponent(tumblr_link_name) + "&description=" + encodeURIComponent(tumblr_link_description);
+      $scope.shareURLS.tumblrURL = "http://www.tumblr.com/share/link?url=" + encodeURIComponent(shareURL + $scope.User.group) + "&name=" + encodeURIComponent(tumblr_link_name) + "&description=" + encodeURIComponent(tumblr_link_description);
     }
 
     function twitterInitialize(){
-      var shareURL = "http://awesome.do/#/register/" + $scope.User.group;
       var text = "I just registered to Awesome. Join me! The more we are the sooner we will get access";
       var via = "AwesomeApp";
-
-
-      $scope.twitterURL = "" + encodeURIComponent(shareURL) + "&text=" + encodeURIComponent(text) + "&via=AwesomeApp&hashtags=AwesomeRegistration&count=none";
+      $scope.shareURLS.twitterURL = "" + encodeURIComponent(shareURL + $scope.User.group) + "&text=" + encodeURIComponent(text) + "&via=AwesomeApp&hashtags=AwesomeRegistration&count=none";
       
+    }
+
+    function googlePlusInitialize(){
+      $scope.shareURLS.googlePlusURL = "" + encodeURIComponent(shareURL + $scope.User.group);
+    }
+
+    function pinterestInitialize(){
+      $scope.shareURLS.pinterestURL = "" + encodeURIComponent(shareURL + $scope.User.group);
     }
 
     function loadCarrousel(){
@@ -94,7 +101,7 @@ controllers.controller('HomeCtrl', function($scope, $route, MailChimp){
     
     loadCarrousel();
 
-    twitterInitialize();
+    
 
 
   	

@@ -127,41 +127,32 @@
             <div id="alertgrouplength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
           </div>
         </form>
-        <!-- <div id="subscriptionresult" ng-show="Subscription.subscriptionDone" > -->
-        <div id="subscriptionresult"  >
-          <!-- <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult"> -->
-          <div id="subscriptionsuccess" class="alert alert-success" >
+        <div id="subscriptionresult" ng-show="Subscription.subscriptionDone" > 
+          <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult"> 
+              
               You have successfully registered with group: {{User.group}}.<br>
               Soon you will receive a confirmation email to: {{User.email}}<br><br>
               Meanwhile why not invite your friends to join you?<br>
               <div id="sharebuttons" class="share-btns-container">
 
                 <!-- Twitter share -->
-                <a href="https://twitter.com/intent/tweet?url={{twitterURL}}" target="_blank"><img class="awesome-share-btn" src="img/social-icons/twitter.png"></img></a>
+                <a href="https://twitter.com/intent/tweet?url={{shareURLS.twitterURL}}" target="_blank"><img class="awesome-share-btn" src="img/social-icons/twitter.png"></img></a>
 
-                
-
-                
                 <!-- Facebook share -->
-                <a href="#"  ng-click="facebookShare()"><img class="awesome-share-btn" src="img/social-icons/facebook500.png"></img></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u={{shareURLS.facebookURL}}"  onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="img/social-icons/facebook500.png"></img></a>
 
                 <!-- Google Plus share -->
-                <div class="div-share-btn" data-action="share" data-annotation="bubble" data-annotation="none" data-href="http://awesome.do/#/register/{{User.group}}">
-                  <img class="awesome-share-btn" src="img/social-icons/googleplus-revised.png"></img>
-                </div>
-
-
-                <a href="https://plus.google.com/share?url=http%3A%2F%2Fawesome.do%2F%23%2Fregister%2F{{User.group}}" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <a href="https://plus.google.com/share?url={{shareURLS.googlePlusURL}}" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
                   <img class="awesome-share-btn" src="img/social-icons/googleplus-revised.png" alt="Share on Google+"/></a>
 
                 <!-- Tumblr share-->
-                <a href="{{tumblrURL}}" title="Share on Tumblr"><img class="awesome-share-btn" src="img/social-icons/tumblr.png"></img></a> 
+                <a href="{{shareURLS.tumblrURL}}" title="Share on Tumblr" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="img/social-icons/tumblr.png"></img></a> 
 
                 <!-- Pinterest share-->
-                <a href="//www.pinterest.com/pin/create/button/?url=http%3A%2F%2Fawesome.do%2F%23%2Fregister%2F{{User.group}}&media=http%3A%2F%2Fawesome.do%2Fimg%2FAwesome_Logo.png&description=Join%20my%20group%20!" data-pin-do="buttonPin" data-pin-config="above"><img class="awesome-share-btn" src="img/social-icons/pinterest.png"></img></a>
+                <a href="//www.pinterest.com/pin/create/button/?url={{shareURLS.pinterestURL}}&media=http%3A%2F%2Fawesome.do%2Fimg%2FAwesome_Logo.png&description=Join%20my%20group%20!" data-pin-do="buttonPin" data-pin-config="above" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="img/social-icons/pinterest.png"></img></a>
 
                 <!-- Email share  -->
-                <a href="mailto:?subject=Join me at Awesome&amp;body=I just regitered at Awesome. Join my group: http://awesome.do/#/{{User.group}}"><img class="awesome-share-btn" src="img/social-icons/email.png"></img></a>
+                <!--a href="mailto:?subject=Join me at Awesome&amp;body=I just regitered at Awesome. Join my group: http://awesome.do/#/{{User.group}}"><img class="awesome-share-btn" src="img/social-icons/email.png"></img></a-->
                 
               </div>
           </div>
