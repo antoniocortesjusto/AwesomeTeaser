@@ -2,8 +2,11 @@ var Awesome =angular.module("AwesomeTeaser", ['filters', 'controllers', 'directi
 
 
 
-Awesome.config(function($routeProvider, $sceDelegateProvider) {
+Awesome.config(function($routeProvider, $sceDelegateProvider, $locationProvider) {
   
+  $locationProvider.html5Mode(true);
+
+
   $routeProvider.when('/register/:groupId', {
     templateUrl: 'html/home.html',
     controller: 'HomeCtrl'
@@ -45,8 +48,6 @@ Awesome.config(function($routeProvider, $sceDelegateProvider) {
   });
 
   $sceDelegateProvider.resourceUrlWhitelist(['self','https://us7.api.mailchimp.com/2.0']);
-
-
 
 
 });
