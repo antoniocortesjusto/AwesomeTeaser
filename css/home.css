@@ -290,34 +290,40 @@ div.team div.team-member .team-photo, .team-photo{
 @keyframes gamaChangeWhite
 {
 	0%		{background-color:rgba(255, 255, 255, 1.0);}
-	10%		{background-color:rgba(255, 255, 255, 0.9)}
-	20%		{background-color:rgba(255, 255, 255, 0.8)}
-	30%		{background-color:rgba(255, 255, 255, 0.7)}
-	50%		{background-color:rgba(255, 255, 255, 0.6)}
-	60%		{background-color:rgba(255, 255, 255, 0.5)}
-	70%		{background-color:rgba(255, 255, 255, 0.4)}
-	80%		{background-color:rgba(255, 255, 255, 0.3)}
-	90%		{background-color:rgba(255, 255, 255, 0.2)}
-	100%	{background-color:rgba(255, 255, 255, 0.1)}
+	10%		{background-color:rgba(255, 255, 255, 1.0);}
+	20%		{background-color:rgba(255, 255, 255, 1.0);}
+	30%		{background-color:rgba(255, 255, 255, 1.0);}
+	40%		{background-color:rgba(255, 255, 255, 1.0);}
+	50%		{background-color:rgba(255, 255, 255, 1.0);}
+	60%		{background-color:rgba(255, 255, 255, 1.0);}
+	65%		{background-color:rgba(255, 255, 255, 1.0);}
+	70%		{background-color:rgba(255, 255, 255, 0.1);}
+	75%		{background-color:rgba(255, 255, 255, 1.0);}
+	80%		{background-color:rgba(255, 255, 255, 0.1);}
+	85%		{background-color:rgba(255, 255, 255, 1.0);}
+	100%	{background-color:rgba(255, 255, 255, 1.0);}
 }
 
 @-webkit-keyframes gamaChangeWhite
 {
 	0%		{background-color:rgba(255, 255, 255, 1.0);}
-	10%		{background-color:rgba(255, 255, 255, 0.9)}
-	20%		{background-color:rgba(255, 255, 255, 0.8)}
-	30%		{background-color:rgba(255, 255, 255, 0.7)}
-	50%		{background-color:rgba(255, 255, 255, 0.6)}
-	60%		{background-color:rgba(255, 255, 255, 0.5)}
-	70%		{background-color:rgba(255, 255, 255, 0.4)}
-	80%		{background-color:rgba(255, 255, 255, 0.3)}
-	90%		{background-color:rgba(255, 255, 255, 0.2)}
-	100%	{background-color:rgba(255, 255, 255, 0.1)}
+	10%		{background-color:rgba(255, 255, 255, 1.0);}
+	20%		{background-color:rgba(255, 255, 255, 1.0);}
+	30%		{background-color:rgba(255, 255, 255, 1.0);}
+	40%		{background-color:rgba(255, 255, 255, 1.0);}
+	50%		{background-color:rgba(255, 255, 255, 1.0);}
+	60%		{background-color:rgba(255, 255, 255, 1.0);}
+	65%		{background-color:rgba(255, 255, 255, 1.0);}
+	70%		{background-color:rgba(255, 255, 255, 0.1);}
+	75%		{background-color:rgba(255, 255, 255, 1.0);}
+	80%		{background-color:rgba(255, 255, 255, 0.1);}
+	85%		{background-color:rgba(255, 255, 255, 1.0);}
+	100%	{background-color:rgba(255, 255, 255, 1.0);}
 }
 
 .white-animate{
-	animation: gamaChangeWhite 10s linear 0s infinite alternate;
-	-webkit-animation: gamaChangeWhite 10s linear 0s infinite alternate;
+	animation: gamaChangeWhite 10s linear 0s infinite normal;
+	-webkit-animation: gamaChangeWhite 10s linear 0s infinite normal;
 }
 /** Add icons as fonts **/
 
