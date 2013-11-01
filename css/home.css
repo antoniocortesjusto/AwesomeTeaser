@@ -133,10 +133,14 @@ div#carouselPreview ol.carousel-indicators {
 }
 
 
+.purple-line-text{
+	color: white;
+	font-family: Museo;
+}
 
 .purple-line{
 	min-width: 100%;
-	height: 5px;
+	height: 25px;
 	background-color: rgba(117, 0, 201, 1);
 	z-index: 20;
 }

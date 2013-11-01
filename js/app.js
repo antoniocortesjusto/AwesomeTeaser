@@ -5,6 +5,7 @@ var Awesome =angular.module("AwesomeTeaser", ['filters', 'controllers', 'directi
 Awesome.config(function($routeProvider, $sceDelegateProvider, $locationProvider) {
   
   $locationProvider.html5Mode(true);
+  $locationProvider.hashPrefix('!');
 
 
   $routeProvider.when('/register/:groupId', {
