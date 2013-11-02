@@ -22,70 +22,70 @@
         <!-- Wrapper for slides -->
         <div class="carousel-inner">
           <div class="item active">
-            <img src="../img/preview/New_Event_1.jpg" alt="Slide 1">
+            <img src="/img/preview/New_Event_1.jpg" alt="Slide 1">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_2.jpg" alt="Slide 2">
+            <img src="/img/preview/New_Event_2.jpg" alt="Slide 2">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_3.jpg" alt="Slide 3">
+            <img src="/img/preview/New_Event_3.jpg" alt="Slide 3">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_4.jpg" alt="Slide 4">
+            <img src="/img/preview/New_Event_4.jpg" alt="Slide 4">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_5.jpg" alt="Slide 5">
+            <img src="/img/preview/New_Event_5.jpg" alt="Slide 5">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_6.jpg" alt="Slide 6">
+            <img src="/img/preview/New_Event_6.jpg" alt="Slide 6">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_7.jpg" alt="Slide 7">
+            <img src="/img/preview/New_Event_7.jpg" alt="Slide 7">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_8.jpg" alt="Slide 8">
+            <img src="/img/preview/New_Event_8.jpg" alt="Slide 8">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_9.jpg" alt="Slide 9">
+            <img src="/img/preview/New_Event_9.jpg" alt="Slide 9">
             
             <div class="carousel-caption">
               ...
             </div>
           </div>
           <div class="item">
-            <img src="../img/preview/New_Event_10.jpg" alt="Slide 10">
+            <img src="/img/preview/New_Event_10.jpg" alt="Slide 10">
             
             <div class="carousel-caption">
               ...
@@ -93,77 +93,93 @@
           </div>
           
         </div>
-
         
       </div>
     </div>
     <div id="logo" >
-      <img class="logo-image"src="img/Awesome_Logo.png">
+      <img class="logo-image"src="/img/Awesome_Logo.png">
     </div>
 
-    <div class="container ">
-      <div class="container awesome-info">
-        <p><h3> Awesome helps you and your friends to create and  manage 
-        <br>your events in a natural simple and fun way.</h3></p>
-        <br>
-        <p class="lead"><h4>To obtain early access to <span class ="highlight">Awesome</span> please Subscribe! <h4></p>
-        <br>
-        <form novalidate id="subscribe" name="subscribeForm" class="form-inline" role="form" ng-hide="Subscription.subscriptionDone" ng-submit="subscribe()">
-          <div class="form-group">
-            <label class="sr-only" for="inputEmail">Email address</label>
-            <input required unique name="email" ng-model="User.email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"  showerrorblur>
-          </div>
-          <div class="form-group">
-            <label class="sr-only" for="inputGroup">Group</label>
-            <input name ="group" id="group" ng-disabled="Params.invited" ng-model="User.group" type="text" class="form-control" id="inputGroup" placeholder="Name your group!!" ng-minlength="5" ng-maxlength="15" ng-pattern="/^\S*$/" showerrorblur>
-          </div>
-          <button type="submit" ng-disabled="subscribeForm.$invalid" class="submit-button btn btn-default">Submit</button>
-          <div id="emailalerts" ng-show="subscribeForm.email.$dirty && subscribeForm.email.$invalid && !subscribeForm.email.$focused">
-            <div id="alertemail" ng-show="subscribeForm.email.$error.unique" class="alert alert-danger"> Email {{User.email}} is already registered. Thank you for your ethusiasm!!</div>
-            <div id="alertemailrequired" ng-show="subscribeForm.email.$error.required || subscribeForm.email.$error.email " class="alert alert-danger"> Please input a valid email.</div>
-          </div>
-          <div id="groupalerts" ng-show="subscribeForm.group.$dirty && subscribeForm.group.$invalid && !subscribeForm.group.$focused">
-            <div id="alertgroupmaxlength" ng-show="subscribeForm.group.$error.maxlength" class="alert alert-danger"> The group name cannot be longer than 15 characters.</div>
-            <div id="alertgroupminlength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
-            <div id="alertgroupminlength" ng-show="subscribeForm.group.$error.pattern" class="alert alert-danger"> The group can´t contain white spaces.</div>
-          </div>
-        </form>
-        <div id="subscriptionresult" ng-show="Subscription.subscriptionDone" > 
-          <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult"> 
+
+    <div class="container awesome-info">
+      <h3><span class ="highlight">Awesome</span> helps you and your friends create and manage 
+      your events in a natural simple and fun way.<h3>
+      <br>
+      <p class="lead"><h4>To obtain early access to <span class ="highlight">Awesome</span> please <span class ="highlight">Subscribe</span>! <h4></p>
+      <form novalidate id="subscribe" name="subscribeForm" class="form-inline" role="form" ng-hide="Subscription.subscriptionDone" ng-submit="subscribe()">
+        <div class="form-group">
+          <label class="sr-only" for="inputEmail">Email address</label>
+          <input required unique name="email" ng-model="User.email" type="email" class="form-control" id="InputEmail" placeholder="Enter email"  showerrorblur>
+        </div>
+        <div class="form-group">
+          <label class="sr-only" for="inputGroup">Group</label>
+          <input name ="group" id="group" ng-disabled="Params.invited" ng-model="User.group" type="text" class="form-control" id="inputGroup" placeholder="Name your group!!" ng-minlength="5" ng-maxlength="15" ng-pattern="/^\S*$/" showerrorblur>
+        </div>
+        <button type="submit" ng-disabled="subscribeForm.$invalid" class="submit-button btn btn-default">Submit</button>
+        <div id="emailalerts" ng-show="subscribeForm.email.$dirty && subscribeForm.email.$invalid && !subscribeForm.email.$focused">
+          <div id="alertemail" ng-show="subscribeForm.email.$error.unique" class="alert alert-danger"> Email {{User.email}} is already registered. Thank you for your ethusiasm!!</div>
+          <div id="alertemailrequired" ng-show="subscribeForm.email.$error.required || subscribeForm.email.$error.email " class="alert alert-danger"> Please input a valid email.</div>
+        </div>
+        <div id="groupalerts" ng-show="subscribeForm.group.$dirty && subscribeForm.group.$invalid && !subscribeForm.group.$focused">
+          <div id="alertgroupmaxlength" ng-show="subscribeForm.group.$error.maxlength" class="alert alert-danger"> The group name cannot be longer than 15 characters.</div>
+          <div id="alertgroupminlength" ng-show="subscribeForm.group.$error.minlength" class="alert alert-danger"> The group name is required to be at least 5 characters long.</div>
+          <div id="alertgroupminlength" ng-show="subscribeForm.group.$error.pattern" class="alert alert-danger"> The group can´t contain white spaces.</div>
+        </div>
+        <div class="alert alert-group-explanation" ng-show="subscribeForm.group.$focused">
+          <h4>What is the <span class ="highlight">group</span> for?</h4>
+          <p class="group-description">We are opening registrations in a group base. <span class ="highlight">The bigger the group the sooner you will get access</span> when Awesome is finally realeased.<br><br>
+          <span class ="highlight">Don´t forget to name your group or use one provided by a friend and share it!</span></p>
+          <br>
+        </div>
+        <div id="registrationgroupalerts" ng-show="subscribeForm.group.$invalid && !subscribeForm.group.$focused && !Params.validParam">
+          <div id="alertgroupmaxlength" class="alert alert-danger"> The group you provided wasn´t valid.<br> Please provide a valid group Id</div>
+        </div>
+      </form>
+      <div id="subscriptionresult" ng-show="Subscription.subscriptionDone" > 
+        <div id="subscriptionsuccess" class="alert alert-success" ng-show="Subscription.subscriptionResult"> 
+            
+            You have successfully registered with group: {{User.group}}.<br>
+            Soon you will receive a confirmation email to: {{User.email}}<br><br>
+            Meanwhile why not invite your friends to join you?<br>
+            <div id="sharebuttons" class="share-btns-container">
+
+              <!-- Twitter share -->
+              <a href="https://twitter.com/intent/tweet?url={{shareURLS.twitterURL}}" target="_blank"><img class="awesome-share-btn" src="/img/social-icons/twitter.png"></img></a>
+
+              <!-- Facebook share -->
+              <a href="https://www.facebook.com/sharer/sharer.php?u={{shareURLS.facebookURL}}"  onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="/img/social-icons/facebook500.png"></img></a>
+
+              <!-- Google Plus share -->
+              <a href="https://plus.google.com/share?url={{shareURLS.googlePlusURL}}" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
+                <img class="awesome-share-btn" src="/img/social-icons/googleplus-revised.png" alt="Share on Google+"/></a>
+
+              <!-- Tumblr share-->
+              <a href="{{shareURLS.tumblrURL}}" title="Share on Tumblr" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="/img/social-icons/tumblr.png"></img></a> 
+
+              <!-- Pinterest share-->
+              <a href="//www.pinterest.com/pin/create/button/?url={{shareURLS.pinterestURL}}&media=http%3A%2F%2Fawesome.do%2Fimg%2FAwesome_Logo.png&description=Join%20my%20group%20!" data-pin-do="buttonPin" data-pin-config="above" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="/img/social-icons/pinterest.png"></img></a>
+
+              <!-- Email share  -->
+              <!--a href="mailto:?subject=Join me at Awesome&amp;body=I just regitered at Awesome. Join my group: http://awesome.do/#/{{User.group}}"><img class="awesome-share-btn" src="img/social-icons/email.png"></img></a-->
               
-              You have successfully registered with group: {{User.group}}.<br>
-              Soon you will receive a confirmation email to: {{User.email}}<br><br>
-              Meanwhile why not invite your friends to join you?<br>
-              <div id="sharebuttons" class="share-btns-container">
-
-                <!-- Twitter share -->
-                <a href="https://twitter.com/intent/tweet?url={{shareURLS.twitterURL}}" target="_blank"><img class="awesome-share-btn" src="img/social-icons/twitter.png"></img></a>
-
-                <!-- Facebook share -->
-                <a href="https://www.facebook.com/sharer/sharer.php?u={{shareURLS.facebookURL}}"  onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="img/social-icons/facebook500.png"></img></a>
-
-                <!-- Google Plus share -->
-                <a href="https://plus.google.com/share?url={{shareURLS.googlePlusURL}}" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;">
-                  <img class="awesome-share-btn" src="img/social-icons/googleplus-revised.png" alt="Share on Google+"/></a>
-
-                <!-- Tumblr share-->
-                <a href="{{shareURLS.tumblrURL}}" title="Share on Tumblr" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="img/social-icons/tumblr.png"></img></a> 
-
-                <!-- Pinterest share-->
-                <a href="//www.pinterest.com/pin/create/button/?url={{shareURLS.pinterestURL}}&media=http%3A%2F%2Fawesome.do%2Fimg%2FAwesome_Logo.png&description=Join%20my%20group%20!" data-pin-do="buttonPin" data-pin-config="above" onclick="javascript:window.open(this.href,'','menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><img class="awesome-share-btn" src="img/social-icons/pinterest.png"></img></a>
-
-                <!-- Email share  -->
-                <!--a href="mailto:?subject=Join me at Awesome&amp;body=I just regitered at Awesome. Join my group: http://awesome.do/#/{{User.group}}"><img class="awesome-share-btn" src="img/social-icons/email.png"></img></a-->
-                
-              </div>
-          </div>
-          <div id="subscriptionerror" class="alert alert-danger" ng-hide="Subscription.subscriptionResult">
-            Sorry an error accurred, pelase try again later.
-          </div>
+            </div>
+        </div>
+        <div id="subscriptionerror" class="alert alert-danger" ng-hide="Subscription.subscriptionResult">
+          Sorry an error accurred, pelase try again later.
         </div>
       </div>
     </div>
   </main>
 </div>
-<div class=" bottom purple-line purple-animate" ></div>
+<div class="over-footer container" >
+  <div class="social-media-header ">
+    <span class="follow-text">Follow us on:  </span>
+    <img class="awesome-follow-btn" src="/img/social-icons/twitter.png"></img>
+    <img class="awesome-follow-btn" src="/img/social-icons/facebook500.png"></img>
+    <img class="awesome-follow-btn" src="/img/social-icons/googleplus-revised.png" alt="Share on Google+"/>
+    <img class="awesome-follow-btn" src="/img/social-icons/tumblr.png"></img>
+    <img class="awesome-follow-btn" src="/img/social-icons/pinterest.png"></img>
+  </div>
+</div>
+<div class=" bottom purple-line-footer" ></div>
    

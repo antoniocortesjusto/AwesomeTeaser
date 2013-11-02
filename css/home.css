@@ -1,12 +1,12 @@
 @font-face { 
 	font-family: Museo;
 	font-weight: @weight-regular;
-	src: url('../res/fonts/Museo300-Regular.otf');
+	src: url('/res/fonts/Museo300-Regular.otf');
 }
 @font-face { 
 	font-family: Museo;
 	font-weight: @weight-bold;
-	src: url('../res/fonts/Museo500-Regular.otf');
+	src: url('/res/fonts/Museo500-Regular.otf');
 }
 
 body h1 {
@@ -38,7 +38,7 @@ body h1 {
 
 }
 .purple-border{
-	border-color: rgba(117, 0, 201, 1);
+	border-color: rgba(117, 0, 201, 1.0);
 	border-width: 1px;
 	border-style: solid;
 }
@@ -46,6 +46,42 @@ body h1 {
 	display: inline;
 	overflow: auto;
 	font-family: Museo;
+}
+
+.demo-description{
+	display: inline;
+	overflow: auto;
+	font-family: Museo;	
+}
+
+.awesome-info h3 {
+	margin-right: 490px;
+	color: #555555;
+}
+
+.demo-description h3 {
+	margin-right: 490px;
+	color: #555555;
+	padding-bottom: 30px;
+}
+
+.demo-description p{
+	margin-right: 490px;
+	color: #555555;
+	font-size: 18px;
+}
+
+.group-description{
+	font-size: 17px
+}
+
+.group-explanation{
+	padding-top: 30px;
+}
+
+.alert-group-explanation{
+	background-color: rgba(117, 0, 201, 0.1);
+	border-color: rgba(117, 0, 201, 0.5);
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
@@ -90,9 +126,9 @@ div#carouselPreview ol.carousel-indicators {
 
 .logo-image{
 	padding-top: 20px;
-	padding-bottom: 20px;
-	height: 250px;
+	height: 200px;
 	width: auto;
+	margin-left: -30px;
 }
 
 .awesome-container{
@@ -121,7 +157,7 @@ div#carouselPreview ol.carousel-indicators {
 	top:0;
 	left:0;
 	font-family: Museo;
-	background: url('../img/background.fw.png') no-repeat center center fixed;
+	background: url('/img/background.fw.png') no-repeat center center fixed;
 	-webkit-background-size: cover;
   	-moz-background-size: cover;
   	-o-background-size: cover;
@@ -138,17 +174,43 @@ div#carouselPreview ol.carousel-indicators {
 	font-family: Museo;
 }
 
-.purple-line{
+.purple-line-footer{
 	min-width: 100%;
-	height: 25px;
-	background-color: rgba(117, 0, 201, 1);
+	height: 10px;
+	background-color: rgba(117, 0, 201, 0.7);
 	z-index: 20;
 }
+
+.purple-line-header{
+	min-width: 100%;
+	height: 10px;
+	background-color: rgba(117, 0, 201, 0.7);
+	z-index: 20;
+	display: inline-block;
+}
+
+.social-media-header{
+	float: right;
+	padding-top: 3px;
+}
+
 .bottom{
 	position: absolute;
 	bottom: 0;
 	display: inline-block;
 	
+}
+
+.over-footer{
+	position: absolute;
+	bottom: 0;
+	display:inline;
+	padding-bottom: 30px;
+	min-width: 100%;
+}
+.follow-text{
+	font-size: 20px;
+	color: #555555;
 }
 
 .top{
@@ -208,6 +270,13 @@ div#subscriptionresult div.alert{
 	width: auto;
 }
 
+.awesome-follow-btn{
+	display: inline-block;
+	padding-right: 10px;
+	height: 30px;
+	width: auto;
+}
+
 .div-share-btn{
 	display: inline-block;
 	height: 50px;
@@ -219,11 +288,14 @@ div#subscriptionresult div.alert{
 
 .preview-iframe{
 	overflow: hidden;
-	float: right;
+	
+
 }
 
 .demo{
+	width: 320px;
 	padding-top: 100px;
+	float: right;
 }
 
 
@@ -233,25 +305,57 @@ div#subscriptionresult div.alert{
 .awesome-pitch{
 	position: absolute;
 	left: 25%;
+	padding-top: 50px;
 }
 
 
 /*Team*/
 
 .team{
-	display: table-row;
+	
+	display: inline-block;
 	width: 100%;
+	padding-top: 50px;
+	padding-left: 20%;
 }
 
 .team-member{
 	padding-right: 50px;
-	width: 244px;
-	display: table-cell;
+	display: inline-block;
+	width: 250px;
+	color: #555555;
+}
+
+.team-member-data{
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.team-icon{
+	color: rgba(117, 0, 201, 0.7);
+	padding-right: 3px;
+}
+.join-team{
+	display: inline-block;
+	width: 100%;
+	padding-top: 150px;
+
 }
 
 div.team div.team-member .team-photo, .team-photo{
 	border-color: rgba(117, 0, 201, 1.0);
 	border-radius: 0px;
+	border-width: 3px;
+	width: 244px;
+	height: auto;
+	margin-bottom: 10px;
+}
+
+
+/* Thanks */
+
+.thanks{
+	padding-top: 70px;
 }
 
 /* Animations */
@@ -300,11 +404,9 @@ div.team div.team-member .team-photo, .team-photo{
 	40%		{background-color:rgba(255, 255, 255, 1.0);}
 	50%		{background-color:rgba(255, 255, 255, 1.0);}
 	60%		{background-color:rgba(255, 255, 255, 1.0);}
-	65%		{background-color:rgba(255, 255, 255, 1.0);}
-	70%		{background-color:rgba(255, 255, 255, 0.1);}
-	75%		{background-color:rgba(255, 255, 255, 1.0);}
-	80%		{background-color:rgba(255, 255, 255, 0.1);}
-	85%		{background-color:rgba(255, 255, 255, 1.0);}
+	70%		{background-color:rgba(255, 255, 255, 0.5);}
+	80%		{background-color:rgba(255, 255, 255, 1.0);}
+	90%		{background-color:rgba(255, 255, 255, 0.2);}
 	100%	{background-color:rgba(255, 255, 255, 1.0);}
 }
 
@@ -317,17 +419,15 @@ div.team div.team-member .team-photo, .team-photo{
 	40%		{background-color:rgba(255, 255, 255, 1.0);}
 	50%		{background-color:rgba(255, 255, 255, 1.0);}
 	60%		{background-color:rgba(255, 255, 255, 1.0);}
-	65%		{background-color:rgba(255, 255, 255, 1.0);}
-	70%		{background-color:rgba(255, 255, 255, 0.1);}
-	75%		{background-color:rgba(255, 255, 255, 1.0);}
-	80%		{background-color:rgba(255, 255, 255, 0.1);}
-	85%		{background-color:rgba(255, 255, 255, 1.0);}
+	70%		{background-color:rgba(255, 255, 255, 0.5);}
+	80%		{background-color:rgba(255, 255, 255, 1.0);}
+	90%		{background-color:rgba(255, 255, 255, 0.2);}
 	100%	{background-color:rgba(255, 255, 255, 1.0);}
 }
 
 .white-animate{
-	animation: gamaChangeWhite 10s linear 0s infinite normal;
-	-webkit-animation: gamaChangeWhite 10s linear 0s infinite normal;
+	animation: gamaChangeWhite 6s linear 0s infinite normal;
+	-webkit-animation: gamaChangeWhite 6s linear 0s infinite normal;
 }
 /** Add icons as fonts **/
 
@@ -336,11 +436,11 @@ div.team div.team-member .team-photo, .team-photo{
 
 @font-face {
   font-family: 'fontello';
-  src: url('../res/fonts/fontello.eot?12556064');
-  src: url('../res/fonts/fontello.eot?12556064#iefix') format('embedded-opentype'),
-       url('../res/fonts/fontello.woff?12556064') format('woff'),
-       url('../res/fonts/fontello.ttf?12556064') format('truetype'),
-       url('../res/fonts/fontello.svg?12556064#fontello') format('svg');
+  src: url('/res/fonts/fontello.eot?75902678');
+  src: url('/res/fonts/fontello.eot?75902678#iefix') format('embedded-opentype'),
+       url('/res/fonts/fontello.woff?75902678') format('woff'),
+       url('/res/fonts/fontello.ttf?75902678') format('truetype'),
+       url('/res/fonts/fontello.svg?75902678#fontello') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -350,7 +450,7 @@ div.team div.team-member .team-photo, .team-photo{
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?12556064#fontello') format('svg');
+    src: url('../font/fontello.svg?75902678#fontello') format('svg');
   }
 }
 */
@@ -386,9 +486,10 @@ div.team div.team-member .team-photo, .team-photo{
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
  
-.icon-pinterest:before { content: '\e806'; } /* '' */
-.icon-twitter:before { content: '\e802'; } /* '' */
-.icon-twitter-1:before { content: '\e803'; } /* '' */
-.icon-facebook:before { content: '\e800'; } /* '' */
-.icon-googleplus:before { content: '\e801'; } /* '' */
-.icon-tumblr:before { content: '\e804'; } /* '' */
+.icon-linkedin-squared:before { content: '\e801'; } /* '' */
+.icon-twitter:before { content: '\e80b'; } /* '' */
+.icon-pinterest:before { content: '\e810'; } /* '' */
+.icon-googleplus:before { content: '\e800'; } /* '' */
+.icon-linkedin:before { content: '\e802'; } /* '' */
+.icon-facebook-rect:before { content: '\e80e'; } /* '' */
+.icon-tumblr-rect:before { content: '\e812'; } /* '' */
