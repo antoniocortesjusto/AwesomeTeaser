@@ -16,15 +16,25 @@ controllers.controller('MainCtrl', function($scope, $route) {
 controllers.controller('HomeCtrl', function($scope, $route, $routeParams, MailChimp){
   
   $scope.Params ={};
-  console.log("routeParams: " + $routeParams.groupId);
-  console.log("typeof $routeParams.groupID == 'undefined'" + typeof $routeParams.groupId == 'undefined');
+  
+
+
   if(!(typeof $routeParams.groupId == 'undefined')){
     $scope.User ={email: '', group: $routeParams.groupId};
-    $scope.Params.invited = true;
+    var groupLength = $scope.User.group.length;
+    if(groupLength < 5 || groupLength > 15){
+      $scope.Params.invited = false
+      $scope.Params.validParam = false;
+    }
+    else{
+      $scope.Params.invited = true;
+      $scope.Params.validParam = true;
+    } 
   }
   else{
     $scope.User ={email: '', group: ''};
     $scope.Params.invited = false;
+    $scope.Params.validParam = true;
   }
   $scope.Subscription ={};
   $scope.Subscription.subscriptionDone = false;

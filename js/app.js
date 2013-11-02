@@ -5,37 +5,37 @@ var Awesome =angular.module("AwesomeTeaser", ['filters', 'controllers', 'directi
 Awesome.config(function($routeProvider, $sceDelegateProvider, $locationProvider) {
   
   $locationProvider.html5Mode(true);
-  $locationProvider.hashPrefix('!');
+  //$locationProvider.hashPrefix('!');
 
 
   $routeProvider.when('/register/:groupId', {
-    templateUrl: 'html/home.html',
+    templateUrl: '/html/home.html',
     controller: 'HomeCtrl'
     
   });
   
   $routeProvider.when('/', {
-    templateUrl: 'html/home.html',
+    templateUrl: '/html/home.html',
     controller: 'HomeCtrl'
   });
 
   $routeProvider.when('/demo', {
-    templateUrl: 'html/demo.html',
+    templateUrl: '/html/demo.html',
     controller: 'DemoCtrl'
   });
 
    $routeProvider.when('/team', {
-    templateUrl: 'html/team.html',
+    templateUrl: '/html/team.html',
     controller: 'TeamCtrl'
   });
 
    $routeProvider.when('/pitch', {
-    templateUrl: 'html/pitch.html',
+    templateUrl: '/html/pitch.html',
     controller: 'PithCtrl'
   });
 
    $routeProvider.when('/thanks', {
-    templateUrl: 'html/thanks.html',
+    templateUrl: '/html/thanks.html',
     controller: 'ThanksCtrl'
   });
 
