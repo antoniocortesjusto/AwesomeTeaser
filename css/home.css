@@ -89,10 +89,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6{
 	color: #555555;
 }
 
-.iphone{
-	float: right;
-	padding-top: 100px;
-	width: 320px;
+
+@media screen and (min-width: 992px){
+	.iphone{
+		float: right;
+		padding-top: 100px;
+		width: 320px;
+	}
+
 }
 
 
@@ -192,6 +196,11 @@ div#carouselPreview ol.carousel-indicators {
 .social-media-header{
 	float: right;
 	padding-top: 3px;
+}
+
+.social-media-thanks{
+	padding-top: 40px;
+	padding-left: 25%;
 }
 
 .bottom{
@@ -297,10 +306,12 @@ div#subscriptionresult div.alert{
 
 }
 
-.demo{
-	width: 320px;
-	padding-top: 100px;
-	float: right;
+@media screen and (min-width: 992px){
+	.demo{
+		width: 320px;
+		padding-top: 100px;
+		float: right;
+	}
 }
 
 
@@ -370,6 +381,102 @@ div.team a:hover{
 .thanks{
 	padding-top: 70px;
 }
+
+.awesome-video{
+	width: 750px;
+	height: 420px;
+}
+
+
+/** Screen resolution 640x960 **/
+
+@media screen and (max-width: 640px){
+
+	.content{
+		display: inline-block;
+	}
+
+	.logo{
+		position: absolute;
+		top:0;
+		width: 100%;
+		padding-left: 50px;
+	}
+
+	.iphone{
+		padding-top: 250px;
+		width: 320px;
+		margin-left: 25%;
+		margin-bottom: 50px;
+		
+	}
+
+	.awesome-info{
+		margin-top: 150px;
+	}
+
+	.subscribe-form{
+		position: relative;
+	}
+
+	.awesome-info h3 {
+		margin-right: 0px;
+	}
+
+	.awesome-container{
+		min-height: 1400px;
+	}
+
+	.map-container{
+		min-height: 1400px;
+	}
+
+	form#subscribe div.alert{
+		margin-top: 10px;
+		width: 600px;
+		padding:3px;
+	}
+
+	div#subscriptionresult div.alert{
+		margin-top: 10px;
+		width: 600px;
+		padding:5px;
+		text-align: center;
+	}
+
+	.team{
+		padding-left: 35%;
+	}
+
+	.team-member{
+		padding-top: 50px;
+	}
+
+	.join-team{
+		padding-top: 0px;
+	}
+
+	.demo{
+		width: 320px;
+		padding-top: 250px;
+		margin-left: 25%;
+	}
+
+	.demo-description p, .demo-description h3{
+		margin-right: 0px;
+	}
+
+	.awesome-video{
+		width: 600px;
+		height: 338px;
+	}
+
+	.awesome-pitch{
+		left: 20px;
+	}
+}
+
+
 
 /* Animations */
 
