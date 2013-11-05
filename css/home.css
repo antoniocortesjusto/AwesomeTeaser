@@ -66,6 +66,11 @@ body h1 {
 	padding-bottom: 30px;
 }
 
+.demo-iframe{
+	width: 320px;
+	height: 570px;
+}
+
 .demo-description p{
 	margin-right: 490px;
 	color: #555555;
@@ -399,10 +404,247 @@ div.team a:hover{
 	}
 }
 
+/* All Smartphones in portrait ----------- */
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: portrait) {
+
+	.content{
+		display: inline-block;
+	}
+
+	.logo{
+		position: absolute;
+		top:0;
+		width: 100%;
+		padding-left: 0px;
+	}
+
+	.logo-image{
+		padding-top: 20px;
+		height: 120px;
+		width: auto;
+		margin-left: 0px;
+	}
+
+	.iphone{
+		padding-top: 150px;
+		width: 280px;
+		margin-left: 0px;
+		margin-bottom: 50px;
+		
+	}
+
+	.awesome-info{
+		margin-top: 150px;
+	}
+
+	.subscribe-form{
+		position: relative;
+	}
+
+	.awesome-info h3 {
+		margin-right: 0px;
+		padding-top: 0px;
+	}
+
+	.social-media-header{
+		float: left;
+		padding-top: 3px;
+	}
+
+	.awesome-container{
+		min-height: 1400px;
+	}
+
+	.map-container{
+		min-height: 1400px;
+	}
+
+	form#subscribe div.alert{
+		width: 280px;
+	}
+
+	div#subscriptionresult div.alert{
+		width: 280px;
+	}
+
+	.team{
+		padding-top: 0px;
+		padding-left: 15%;
+	}
+
+	.team-member{
+		padding-top: 50px;
+	}
+
+	.join-team{
+		padding-top: 0px;
+		padding-left: 5%;
+
+	}
+	.demo-container .logo{
+		padding-top: 500px;
+	}
+
+	.demo-description p, .demo-description h3{
+		margin-right: 0px;
+		
+	}
+
+	.demo-description h3{
+		padding-top: 650px;
+	}
+	
+	.demo{
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 320px;
+		height: 470px;
+		padding-top: 10px;
+		margin-left: 0px;
+		z-index: 30;
+	}
+
+
+	.demo-iframe{
+		width: 320px;
+		height: 470px;
+	}
+	.thanks{
+		padding-top: 30px;
+	}
+
+	.thanks h2{
+		font-size: 20px;
+	}
+	.social-media-thanks{
+		padding-left: 0px;
+		padding-top: 20px;
+	}
+
+	.awesome-video{
+		width: 267px;
+		height: 150px;
+	}
+
+	.awesome-pitch{
+		left: 20px;
+	}
+
+}
+
+
+/* All Smartphones in landscape ----------- */
+@media screen and (min-width: 320px) and (max-width: 480px) and (orientation: landscape) {
+
+	.content{
+		display: inline-block;
+	}
+
+	.logo{
+		position: absolute;
+		top:0;
+		width: 100%;
+		padding-left: 0px;
+	}
+
+	.logo-image{
+		padding-top: 20px;
+		height: 180px;
+		width: auto;
+		margin-left: 0px;
+	}
+
+	.iphone{
+		padding-top: 200px;
+		width: 400px;
+		margin-left: 25px;
+		margin-bottom: 50px;
+		
+	}
+
+	.awesome-info{
+		margin-top: 150px;
+	}
+
+	.subscribe-form{
+		position: relative;
+	}
+
+	.awesome-info h3 {
+		margin-right: 0px;
+		padding-top: 0px;
+	}
+
+	.social-media-header{
+		float: left;
+		padding-top: 3px;
+	}
+
+	.awesome-container{
+		min-height: 1550px;
+	}
+
+	.map-container{
+		min-height: 1550px;
+	}
+
+	form#subscribe div.alert{
+		width: 440px;
+	}
+
+	div#subscriptionresult div.alert{
+		width: 440px;
+	}
+
+	.team{
+		padding-left: 27%;
+		padding-top: 0px
+	}
+
+	.team-member{
+		padding-top: 50px;
+	}
+
+	.join-team{
+		padding-top: 50px;
+		padding-left: 10%;
+	}
+
+	.demo{
+		width: 320px;
+		padding-top: 250px;
+		margin-left: 13%;
+	}
+
+	.demo-description p, .demo-description h3{
+		margin-right: 0px;
+	}
+
+	.thanks{
+		padding-top: 0px;
+	}
+
+	.pitch-container .logo{
+		display: none;
+	}
+
+	.awesome-video{
+		width: 420px;
+		height: 236px;
+	}
+
+	.awesome-pitch{
+		left: 20px;
+	}
+
+}
+
+
 
 /** Screen resolution 640x960 **/
 
-@media screen and (max-width: 640px){
+@media screen and (min-width : 481px) and (max-width: 640px){
 
 	.content{
 		display: inline-block;
@@ -588,6 +830,93 @@ div.team a:hover{
 
 
 }
+
+
+
+/* iPhone 4 ----------- */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+	.content{
+		display: inline-block;
+	}
+
+	.logo{
+		position: absolute;
+		top:0;
+		width: 100%;
+		padding-left: 50px;
+	}
+
+	.iphone{
+		padding-top: 250px;
+		width: 320px;
+		margin-left: 25%;
+		margin-bottom: 50px;
+	}
+
+	.awesome-info{
+		margin-top: 150px;
+	}
+
+	.subscribe-form{
+		position: relative;
+	}
+
+	.awesome-info h3 {
+		margin-right: 0px;
+	}
+
+	.awesome-container{
+		min-height: 1400px;
+	}
+
+	.map-container{
+		min-height: 1400px;
+	}
+
+	form#subscribe div.alert{
+		width: 600px;
+	}
+
+	div#subscriptionresult div.alert{
+		width: 600px;
+	}
+
+	.team{
+		padding-left: 35%;
+	}
+
+	.team-member{
+		padding-top: 50px;
+	}
+
+	.join-team{
+		padding-top: 0px;
+	}
+
+	.demo{
+		width: 320px;
+		padding-top: 250px;
+		margin-left: 25%;
+	}
+
+	.demo-description p, .demo-description h3{
+		margin-right: 0px;
+	}
+
+	.awesome-video{
+		width: 600px;
+		height: 338px;
+	}
+
+	.awesome-pitch{
+		left: 20px;
+	}
+
+}
+
+
+
+
 
 /* Animations */
 
