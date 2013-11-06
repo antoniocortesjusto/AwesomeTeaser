@@ -834,7 +834,7 @@ div.team a:hover{
 
 
 /* iPhone 4 ----------- */
-@media only screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
+@media screen and (-webkit-min-device-pixel-ratio : 1.5),only screen and (min-device-pixel-ratio : 1.5) {
 	.content{
 		display: inline-block;
 	}
@@ -915,6 +915,42 @@ div.team a:hover{
 }
 
 
+
+@media screen and (min-height: 500px) and (max-height: 620px) and (orientation: landscape) {
+
+	.awesome-info h3 {
+		padding-top: 10%;
+	}
+
+	/* Quick fix for Nexus 7*/
+	@media screen and (min-height: 602px) and (max-height: 610px){
+		.awesome-info h3 {
+			padding-top: 15%;
+		}
+	}
+
+	/*Quick fix for Kindle Fire HD 7 */
+	@media screen and (min-height: 500px) and (max-height: 599px){
+		.awesome-info h3 {
+			padding-top: 15%;
+		}
+	}
+
+	.iphone{
+		padding-top: 100px;
+	}
+
+	.logo-image {
+		padding-top: 20px;
+		height: 150px;
+		width: auto;
+	}
+
+	.join-team{
+		padding-top: 70px;
+	}
+
+}
 
 
 
